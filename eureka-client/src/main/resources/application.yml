@@ -1,0 +1,27 @@
+server:
+  port: 8001
+
+
+# spring配置
+spring:
+  application:
+    # 项目名字，也是微服务名   Ribbon接口域名用: http://localhost:8001/ 变 http://eureka-client:8001/
+    name: eureka-client
+
+
+
+# eureka服务注册
+eureka:
+  client:
+    service-url:
+#      集群的注册多台服务器写法：http://localhost:7003/eureka/, http://localhost:7004/eureka/
+      defaultZone: http://localhost:7003/eureka/
+    instance:
+      instance-id: nice-name
+#      是否显示IP地址
+      prefer-ip-address: false
+
+
+info:
+  app.name: rafael
+  company.name: rafael.com
