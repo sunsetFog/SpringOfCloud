@@ -18,6 +18,7 @@ public class hystrixController {
             */
             throw new RuntimeException("没有该id");
         }
+        System.out.println("OKOK!");
         return "成功！";
     }
     public String hystrixGet() {
@@ -30,5 +31,10 @@ public class hystrixController {
             throw new RuntimeException("没有该id");
         }
         return "成功！";
+    }
+    @GetMapping("/hystrix/path")
+    public String hystrixPath() {
+        System.out.println("OK!");
+        return "OKOK!";
     }
 }

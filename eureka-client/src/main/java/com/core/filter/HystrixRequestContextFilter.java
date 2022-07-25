@@ -12,15 +12,16 @@ import java.io.IOException;
  */
 @Component
 @WebFilter(urlPatterns = "/*",asyncSupported = true)
-public class HystrixRequestContextFilter implements Filter {
-    @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        System.out.println("熔断过滤器");
-        HystrixRequestContext context = HystrixRequestContext.initializeContext();
-        try {
-            filterChain.doFilter(servletRequest, servletResponse);
-        } finally {
-            context.close();
-        }
-    }
+public class HystrixRequestContextFilter {
+//public class HystrixRequestContextFilter implements Filter {
+//    @Override
+//    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+//        System.out.println("熔断过滤器");
+//        HystrixRequestContext context = HystrixRequestContext.initializeContext();
+//        try {
+//            filterChain.doFilter(servletRequest, servletResponse);
+//        } finally {
+//            context.close();
+//        }
+//    }
 }

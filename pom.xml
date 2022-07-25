@@ -122,7 +122,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
-            <version>3.4.1</version>
+            <version>2.1.1</version>
         </dependency>
         <!--web模板引擎-->
         <dependency>

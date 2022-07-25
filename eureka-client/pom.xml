@@ -40,10 +40,46 @@
             <artifactId>spring-cloud-starter-feign</artifactId>
             <version>1.4.6.RELEASE</version>
         </dependency>
-        <!--    断路器：服务熔断    -->
+        <!--    断路器：
+                    服务熔断：服务端处理，某个服务超时或者异常，引起熔断，像保险丝
+                        例子：通过id获取该条数据，可是没有该id就熔断，就不会500报错
+                    服务降级：客户端处理，从整体网站请求负载，当某个服务熔断或者关闭后，客户端FallbackFactory返回默认值，
+                        最后用户选其他服务器用。整体服务水平下降，但是好歹能用，比直接挂掉强
+        -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+            <version>2.2.9.RELEASE</version>
+        </dependency>
+        <!--    dashboard流监控
+            访问流监控页面：http://localhost:8001/hystrix
+            搜索url: http://localhost:8001/actuator/hystrix.stream
+            选2000，Demo名，点提交
+            遇到问题：jquery版本不对，报404
+            最后调用接口多次，圆变大了，图表显示接口访问量变大，6种数字颜色是警告级别：http://localhost:8001/hystrix/list
+        -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+            <version>2.2.9.RELEASE</version>
+        </dependency>
+        <!--    路由网关
+            设路由后顺序：url浏览器访问 > 路由 > 服务器
+            zuul有过滤器：
+                身份验证和安全性
+                动态路由
+                见解和监控
+                压力测试
+                减载
+           访问：http://localhost:8001/eureka-client/hystrix/path
+           http://eureka7001.com:8001/eureka-client/hystrix/path
+           http://eureka7001.com:8001/mydept/hystrix/path
+
+           http://eureka7001.com:8001/hystrix/path
+        -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
             <version>2.2.9.RELEASE</version>
         </dependency>
     </dependencies>

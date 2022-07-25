@@ -16,12 +16,27 @@ eureka:
     service-url:
 #      集群的注册多台服务器写法：http://localhost:7003/eureka/, http://localhost:7004/eureka/
       defaultZone: http://localhost:7003/eureka/
-    instance:
-      instance-id: nice-name
+  instance:
+    instance-id: nice-name
 #      是否显示IP地址
-      prefer-ip-address: false
+    prefer-ip-address: false
 
 
 info:
   app.name: rafael
   company.name: rafael.com
+
+feign:
+  hystrix:
+#    feign开启降级
+    enable: true
+
+zuul:
+  routes:
+#    其他微服务名，当前用不了
+    eureka-client:
+      path: /mydept/**
+#      不能使用这路径访问
+#  ignored-services: eureka-client
+#  通配符，但是path还能访问
+#  ignored-services: “*”
