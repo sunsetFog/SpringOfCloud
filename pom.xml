@@ -16,6 +16,8 @@
         <module>springcloud-provider</module>
         <module>eureka-server</module>
         <module>eureka-client</module>
+        <module>eureka2client</module>
+        <module>MyBatisPlus</module>
     </modules>
     <!--  版本号  -->
     <properties>

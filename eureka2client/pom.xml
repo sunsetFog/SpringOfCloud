@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>eureka-client</artifactId>
+    <artifactId>eureka2client</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -71,11 +71,11 @@
                 见解和监控
                 压力测试
                 减载
-           访问：http://localhost:8001/eureka2client/water
-           http://eureka7001.com:8001/eureka2client/water
-           http://eureka7001.com:8001/mydept/water
+           访问：http://localhost:8001/eureka-client/hystrix/path
+           http://eureka7001.com:8001/eureka-client/hystrix/path
+           http://eureka7001.com:8001/mydept/hystrix/path
 
-           http://eureka7001.com:8001/water
+           http://eureka7001.com:8001/hystrix/path
         -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
