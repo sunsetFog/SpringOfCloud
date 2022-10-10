@@ -1,0 +1,11 @@
+server:
+  port: 8066
+
+spring:
+  #  消息中间件配置
+  rabbitmq:
+    username: admin
+    password: admin
+    virtual-host: /
+    host: 39.108.174.145
+    port: 5672

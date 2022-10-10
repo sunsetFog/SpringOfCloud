@@ -18,6 +18,7 @@
         <module>eureka-client</module>
         <module>eureka2client</module>
         <module>MyBatisPlus</module>
+        <module>Rabbitmq-consumer</module>
     </modules>
     <!--  版本号  -->
     <properties>
