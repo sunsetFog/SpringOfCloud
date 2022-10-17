@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.*;
 import io.swagger.annotations.ApiModel;
 import lombok.*;
 import lombok.experimental.Accessors;
+import org.jeecgframework.poi.excel.annotation.Excel;
 
 import java.util.Date;
 
@@ -31,7 +32,9 @@ public class Goods {
     // 对应数据库中的主键（uuid、自增id、雪花算法、redis、zookeeper）
 //    @TableId(type = IdType.ID_WORKER)
     private Long id;
+    @Excel(name = "商品名字", width = 15,type = 2)
     private String name;
+    @Excel(name = "商品图片", width = 15,type = 2)
     private String img_url;
     /*
         创建时间和更新时间
