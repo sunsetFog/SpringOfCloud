@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>MyBatisPlus</artifactId>
+    <artifactId>base-core</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -17,6 +17,44 @@
     </properties>
 
     <dependencies>
+<!--
+import org.apache.commons.io.IOUtils;
+-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+<!--
+package org.jeecg.modules.system.entity;  ===SysUser
+import com.fasterxml.jackson.annotation.JsonProperty;
+解决okhttp引用了kotlin,应用启动有警告日志问题
+-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-kotlin</artifactId>
+            <version>2.13.4</version>
+        </dependency>
+        <!-- mini文件存储服务 -->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>8.4.4</version>
+        </dependency>
+        <!--   111     -->
+        <dependency>
+            <groupId>org.pegdown</groupId>
+            <artifactId>pegdown</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.11</version>
+        </dependency>
+
+
+
         <!--    excel导出    -->
         <dependency>
             <groupId>org.jeecgframework</groupId>

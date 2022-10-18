@@ -19,6 +19,7 @@
         <module>eureka2client</module>
         <module>MyBatisPlus</module>
         <module>Rabbitmq-consumer</module>
+        <module>base-core</module>
     </modules>
     <!--  版本号  -->
     <properties>
@@ -45,6 +46,7 @@
             <type>pom</type>
             <scope>import</scope>
         </dependency>
+
         <!--	Swagger	-->
         <dependency>
             <groupId>io.springfox</groupId>

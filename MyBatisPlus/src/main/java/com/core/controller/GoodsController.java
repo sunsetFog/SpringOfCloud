@@ -1,5 +1,6 @@
 package com.core.controller;
 
+import cn.hutool.core.collection.CollectionUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -10,10 +11,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
+import javax.swing.text.html.parser.Entity;
+import java.security.Permission;
+import java.util.*;
+import java.util.stream.Collectors;
 
 //@Controller
 @RestController
@@ -24,9 +25,42 @@ public class GoodsController {
     @GetMapping("/shop/queryAll")
     public List<Goods> shopQueryAll() {
         // 查询所有
-        List<Goods> goods = goodsMapper.selectList(null);
-        goods.forEach(System.out::println);
-        return goods;
+        List<Goods> goodsList = goodsMapper.selectList(null);
+        /*
+            stream只能被“消费”一次，一旦遍历过就会失效，就像容器的迭代器那样，想要再次遍历必须重新生成
+            map():用于映射每个元素到对应的结果。
+            filter():filter 方法用于通过设置的条件过滤出元素。
+            Collectors.toList() 用来结束Stream流
+        */
+//        List<Long> ids= goodsList.stream().map(Goods::getId).collect(Collectors.toList());
+        List<Long> ids= goodsList.stream().map(item->item.getId()).collect(Collectors.toList());
+        List<Goods> permissions = goodsList.stream().filter(item -> item.getId().equals(1L)).collect(Collectors.toList());
+        System.out.println("map匹配id数组："+ids);// [1, 2, 3, 4]
+        System.out.println("filter匹配："+permissions);
+
+        String shipIds = "1,3,5,6";
+        List<Long> shipIdList = Arrays.stream(shipIds.split(",")).map(Long::parseLong).collect(Collectors.toList());
+        System.out.println("方式1-字符串转list: "+shipIdList);// [1, 3, 5, 6]
+        String join = CollectionUtil.join(shipIdList, ",");
+        System.out.println("list转逗号分隔的字符串: "+join);// 1,3,5,6
+        List<String> strings = Arrays.asList(join.split(","));
+        System.out.println("方式2-字符串转list: "+strings);
+
+
+        // 根据name去重
+        List<Goods> unique01 = goodsList.stream().collect(
+                Collectors.collectingAndThen(
+                        Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(Goods::getName))), ArrayList::new)
+        );
+        // 根据name,sex两个属性去重
+        List<Goods> unique02 = goodsList.stream().collect(
+                Collectors. collectingAndThen(
+                        Collectors.toCollection(() -> new TreeSet<>(Comparator.comparing(o -> o.getName() + ";" + o.getName()))), ArrayList::new)
+        );
+        System.out.println("list根据某个对象属性去重: "+unique02);
+
+        goodsList.forEach(System.out::println);
+        return goodsList;
     }
     // 添加
     @GetMapping("/shop/add")

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/MyBatisPlus/MyBatisPlus.iml" filepath="$PROJECT_DIR$/MyBatisPlus/MyBatisPlus.iml" />
       <module fileurl="file://$PROJECT_DIR$/Rabbitmq-consumer/Rabbitmq-consumer.iml" filepath="$PROJECT_DIR$/Rabbitmq-consumer/Rabbitmq-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringOfCloud.iml" filepath="$PROJECT_DIR$/SpringOfCloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/base-core/base-core.iml" filepath="$PROJECT_DIR$/base-core/base-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka2client/eureka2client.iml" filepath="$PROJECT_DIR$/eureka2client/eureka2client.iml" />
