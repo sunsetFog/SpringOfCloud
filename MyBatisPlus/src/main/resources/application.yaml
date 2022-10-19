@@ -23,6 +23,7 @@ spring:
 
 
 mybatis-plus:
+  mapper-locations: classpath*:mapper/*Mapper.xml
   # 配置日志
   configuration:
     # 选控制台输出

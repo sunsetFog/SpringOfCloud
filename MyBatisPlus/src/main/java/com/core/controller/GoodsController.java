@@ -6,9 +6,12 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.core.mapper.GoodsMapper;
 import com.core.pojo.Goods;
+import com.core.service.GoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.swing.text.html.parser.Entity;
@@ -21,6 +24,14 @@ import java.util.stream.Collectors;
 public class GoodsController {
     @Autowired
     private GoodsMapper goodsMapper;
+    @Autowired
+    private GoodsService goodsService;
+    // 使用xml来查询单条
+    @RequestMapping(value = "/select/row", method = RequestMethod.GET)
+    public Goods rowWay() {
+        Goods goods = this.goodsService.fishWay(2);
+        return goods;
+    }
     // 查询所有
     @GetMapping("/shop/queryAll")
     public List<Goods> shopQueryAll() {
