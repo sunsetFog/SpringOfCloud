@@ -47,6 +47,8 @@
             <scope>import</scope>
         </dependency>
 
+
+
         <!--	Swagger	-->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -204,31 +206,36 @@
         </dependencies>
     </dependencyManagement>
 
-
-    <build>
-        <!--        解决打包后target里没有xml文件   右边Maven》生命周期》双击clean，重运行，target也没有           -->
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.json</include>
-                    <include>**/*.ftl</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                    <include>**/*.json</include>
-                    <include>**/*.ftl</include>
-                </includes>
-                <filtering>false</filtering>
-            </resource>
-        </resources>
-    </build>
+    <!--
+    解决打包后target里没有xml文件   右边Maven》生命周期》双击clean，重运行，target也没有
+    加入后报错  target里没有yaml文件
+    Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.  Reason: Failed to determine a suitable driver class
+    -->
+<!--    <build>-->
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/java</directory>-->
+<!--                <includes>-->
+<!--                    <include>**/*.properties</include>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                    <include>**/*.json</include>-->
+<!--                    <include>**/*.ftl</include>-->
+<!--                    <include>**/*.yaml</include>-->
+<!--                </includes>-->
+<!--                <filtering>false</filtering>-->
+<!--            </resource>-->
+<!--            <resource>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--                <includes>-->
+<!--                    <include>**/*.properties</include>-->
+<!--                    <include>**/*.xml</include>-->
+<!--                    <include>**/*.json</include>-->
+<!--                    <include>**/*.ftl</include>-->
+<!--                    <include>**/*.yaml</include>-->
+<!--                </includes>-->
+<!--                <filtering>false</filtering>-->
+<!--            </resource>-->
+<!--        </resources>-->
+<!--    </build>-->
 
 </project>

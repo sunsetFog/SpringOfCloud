@@ -4,6 +4,7 @@ import cn.hutool.core.collection.CollectionUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.core.common.api.CommonAPI;
 import com.core.mapper.GoodsMapper;
 import com.core.pojo.Goods;
 import com.core.service.GoodsService;
@@ -26,11 +27,14 @@ public class GoodsController {
     private GoodsMapper goodsMapper;
     @Autowired
     private GoodsService goodsService;
+    @Autowired
+    private CommonAPI commonAPI;
     // 使用xml来查询单条
     @RequestMapping(value = "/select/row", method = RequestMethod.GET)
     public Goods rowWay() {
         Goods goods = this.goodsService.fishWay(2);
-        return goods;
+        Goods goods1 = commonAPI.goodsList(19);
+        return goods1;
     }
     // 查询所有
     @GetMapping("/shop/queryAll")
