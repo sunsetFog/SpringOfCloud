@@ -20,6 +20,7 @@
         <module>MyBatisPlus</module>
         <module>Rabbitmq-consumer</module>
         <module>base-core</module>
+        <module>upload-files</module>
     </modules>
     <!--  版本号  -->
     <properties>
