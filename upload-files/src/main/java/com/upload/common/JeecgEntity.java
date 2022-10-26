@@ -28,7 +28,7 @@ public class JeecgEntity implements Serializable {
      * ID
      */
 //    @TableId(type = IdType.ASSIGN_ID)
-    @TableId(type = IdType.ID_WORKER)
+    @TableId(type = IdType.ID_WORKER_STR)
     @ApiModelProperty(value = "ID")
     private java.lang.String id;
 

@@ -19,10 +19,10 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 jeecg:
-  #阿里云oss存储和大鱼短信秘钥配置
+  #阿里云oss存储和大鱼短信秘钥配置   未知填??
   oss:
-    accessKey: ??
-    secretKey: ??
+    accessKey: LTAI5tDh7ep2ALGsBexmMo3C
+    secretKey: SKotVCXYjsG93vVy1zBSMKiTkCoPDx
     endpoint: oss-cn-shenzhen.aliyuncs.com
     bucketName: rafael
   # minio文件上传

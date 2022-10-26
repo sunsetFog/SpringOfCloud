@@ -52,7 +52,7 @@ public class OssFileController {
             result.success("上传成功！");
         }
         catch (Exception ex) {
-//            log.info(ex.getMessage(), ex);
+            log.info(ex.getMessage(), ex);
             result.error500("上传失败");
         }
         return result;

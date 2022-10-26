@@ -97,16 +97,13 @@ public class OssBootUtil {
         //update-end-author:liusq date:20210809 for: 过滤上传文件类型
 
         String filePath = null;
-        System.out.println("---111---");
         initOss(endPoint, accessKeyId, accessKeySecret);
-        System.out.println("---222---");
         StringBuilder fileUrl = new StringBuilder();
         String newBucket = bucketName;
         if(oConvertUtils.isNotEmpty(customBucket)){
             newBucket = customBucket;
         }
         try {
-            System.out.println("---aaa---");
             //判断桶是否存在,不存在则创建桶
             if(!ossClient.doesBucketExist(newBucket)){
                 ossClient.createBucket(newBucket);
@@ -116,7 +113,6 @@ public class OssBootUtil {
             if("" == orgName){
                 orgName=file.getName();
             }
-            System.out.println("---333---");
             orgName = CommonUtils.getFileName(orgName);
             String fileName = orgName.indexOf(".")==-1
                     ?orgName + "_" + System.currentTimeMillis()
@@ -128,29 +124,22 @@ public class OssBootUtil {
             fileDir=StrAttackFilter.filter(fileDir);
             //update-end-author:wangshuai date:20201012 for: 过滤上传文件夹名特殊字符，防止攻击
             fileUrl = fileUrl.append(fileDir + fileName);
-            System.out.println("---444---");
 
             if (oConvertUtils.isNotEmpty(staticDomain) && staticDomain.toLowerCase().startsWith("http")) {
                 filePath = staticDomain + "/" + fileUrl;
             } else {
                 filePath = "https://" + newBucket + "." + endPoint + "/" + fileUrl;
             }
-            System.out.println("---bbb---"+newBucket);
-            System.out.println("---w1---"+fileUrl.toString());
-            System.out.println("---w2---"+file.getInputStream());
             PutObjectResult result = ossClient.putObject(newBucket, fileUrl.toString(), file.getInputStream());
-            System.out.println("---ccc---");
             // 设置权限(公开读)
 //            ossClient.setBucketAcl(newBucket, CannedAccessControlList.PublicRead);
             if (result != null) {
                 log.info("------OSS文件上传成功------" + fileUrl);
             }
         } catch (IOException e) {
-            System.out.println("---555---");
             e.printStackTrace();
             return null;
         }catch (Exception e) {
-            System.out.println("---666---");
             e.printStackTrace();
             return null;
         }
