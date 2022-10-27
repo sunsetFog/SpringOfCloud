@@ -27,7 +27,7 @@ jeecg:
     bucketName: rafael
   # minio文件上传
   minio:
-    minio_url: http://minio.jeecg.com
-    minio_name: ??
-    minio_pass: ??
-    bucketName: otatest
+    minio_url: http://127.0.0.1:9000
+    minio_name: ROOTUSER
+    minio_pass: CHANGEME123
+    bucketName: minio-admin
