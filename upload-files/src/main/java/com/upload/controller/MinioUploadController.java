@@ -26,7 +26,7 @@ import javax.servlet.http.HttpServletRequest;
 @RestController
 @CrossOrigin
 @RequestMapping("/sys/upload")
-public class SysUploadController {
+public class MinioUploadController {
     @Autowired
     private IOssFileService ossFileService;
 
@@ -37,7 +37,9 @@ public class SysUploadController {
     @PostMapping(value = "/uploadMinio")
     public Result<?> uploadMinio(HttpServletRequest request) throws Exception {
         Result<?> result = new Result<>();
+        // 文件保存目录
         String bizPath = request.getParameter("biz");
+        System.out.println("==biz=="+bizPath);
 
         //LOWCOD-2580 sys/common/upload接口存在任意文件上传漏洞
         boolean flag = oConvertUtils.isNotEmpty(bizPath) && (bizPath.contains("../") || bizPath.contains("..\\"));
@@ -53,8 +55,11 @@ public class SysUploadController {
         MultipartFile file = multipartRequest.getFile("file");
         // 获取文件名
         String orgName = file.getOriginalFilename();
+        System.out.println("==文件名01=="+orgName);// u353.png
         orgName = CommonUtils.getFileName(orgName);
+        System.out.println("==文件名02=="+orgName);
         String fileUrl =  MinioUtil.upload(file,bizPath);
+        System.out.println("==文件名路径=="+fileUrl);// http://127.0.0.1:9000/minio-admin/ok/u353_1666921334530.png
         if(!oConvertUtils.isNotEmpty(fileUrl)){
             return Result.error("上传失败,请检查配置信息是否正确!");
         }
