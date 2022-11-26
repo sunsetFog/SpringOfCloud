@@ -11,4 +11,6 @@ import org.springframework.stereotype.Repository;
 public interface GoodsMapper extends BaseMapper<Goods> {
     // 查询指定单条数据
     Goods selectByPrimaryKey(Integer id);
+    // 添加
+    int insertSelective(Goods record);
 }

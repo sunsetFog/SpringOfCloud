@@ -18,6 +18,10 @@ spring:
     url: jdbc:mysql://localhost:3306/db_news?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     # 驱动   mysql8: com.mysql.cj.jdbc.Driver      mysql5: com.mysql.jdbc.Driver
     driver-class-name: com.mysql.jdbc.Driver
+  #json 时间戳统一转换
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 
 
 
@@ -28,12 +32,15 @@ mybatis-plus:
   configuration:
     # 选控制台输出
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 关闭自动驼峰命名规则映射   问题：Mybatis-plus使用selectList查询数据为null的问题及解决办法   实体类不用驼峰引起的
+#    map-underscore-to-camel-case: false
   # 配置逻辑删除
   global-config:
     db-config:
       logic-delete-value: 1
       logic-not-delete-value: 0
-jeecg:
-  path:
+
+rafael:
+  file:
     #study: jeecgboot导出  文件上传根目录 设置
-    upload: /opt/upFiles
+    path: D:/profile/

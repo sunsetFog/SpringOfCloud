@@ -83,7 +83,7 @@ public class GoodsController {
         // id自动回填
         Goods goods = new Goods();
         goods.setName("儿哈");
-        goods.setCreate_time(new Date());
+        goods.setCreateTime(new Date());
         int insert = goodsMapper.insert(goods);
         return insert;
     }
