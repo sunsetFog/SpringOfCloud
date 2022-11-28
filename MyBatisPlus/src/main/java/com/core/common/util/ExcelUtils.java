@@ -122,8 +122,8 @@ public class ExcelUtils {
         }
 
         HashMap<String, String> map = new HashMap<>();
-        map.put("fileName", name);
-        map.put("fileUrl", "http://localhost:8060/sky/downloadFile?filename=" + name + ".txt");
+        map.put("fileName", name + ".txt");
+        map.put("fileUrl", "http://localhost:8060/sky/downloadFile2?filename=" + name + ".txt");
         return map;
     }
 
