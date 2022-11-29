@@ -21,9 +21,20 @@ import org.apache.commons.net.ftp.FTPReply;
 public class FtpUtil {
 
     private static final Log logger = LogFactory.getLog(FtpUtil.class);
-    public static String pictureUploadByConfig(FtpConfig ftpConfig, String picNewName, String picSavePath,
+
+    /**
+     *
+     * @param picNewName   新名+后缀
+     * @param picSavePath
+     * @param inputStream
+     * @return
+     * @throws IOException
+     */
+    public static String pictureUploadByConfig(String picNewName, String picSavePath,
                                                InputStream inputStream) throws IOException {
+        FtpConfig ftpConfig = new FtpConfig();
         logger.info("【pictureUploadByConfig】");
+        System.out.println("ftpConfig==="+ftpConfig);
         String picHttpPath = null;
 
         boolean flag = uploadFile(ftpConfig.getFTP_ADDRESS(), ftpConfig.getFTP_PORT(), ftpConfig.getFTP_USERNAME(),
@@ -34,6 +45,7 @@ public class FtpUtil {
         }
         picHttpPath = ftpConfig.getIMAGE_BASE_URL() + picSavePath + "/" + picNewName;
         logger.info("【picHttpPath】"+picHttpPath);
+        System.out.println("picHttpPath==="+picHttpPath);
         return picHttpPath;
     }
 
@@ -65,6 +77,13 @@ public class FtpUtil {
         FTPClient ftp = new FTPClient();
         try {
             int reply;
+            System.out.println("host=="+host);
+            System.out.println("port=="+port);
+            /**
+             * java.net.ConnectException: Connection refused: connect
+             * springboot读取sftp文件  http://www.qb5200.com/article/470919.html
+             * Linux下开启FTP的21端口   https://cloud.tencent.com/developer/article/1334725?from=15425
+             */
             ftp.connect(host, port);// 连接FTP服务器
             // 如果采用默认端口，可以使用ftp.connect(host)的方式直接连接FTP服务器
             ftp.login(username, password);// 登录

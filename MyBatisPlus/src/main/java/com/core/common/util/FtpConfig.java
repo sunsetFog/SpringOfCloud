@@ -10,34 +10,37 @@ package com.core.common.util;
 public class FtpConfig {
 
     /**
-     * 获取IP地址
+     * 阿里云服务器ip地址
      */
-    private String FTP_ADDRESS = "服务器ip地址";
+    private String FTP_ADDRESS = "39.108.174.145";
 
     /**
      * 端口号
+     * ftp报错Could not parse response code. Server Reply ssh
+     * https://blog.csdn.net/csdnyq/article/details/125435482
+     * 22是sftp的默认端口，ftp默认使用的端口是21
      */
     private String FTP_PORT = "21";
 
     /**
-     * 用户名
+     * 阿里云控制台的用户名
      */
-    private String FTP_USERNAME = "ftp用户名";
+    private String FTP_USERNAME = "root";
 
     /**
-     * 密码
+     * 阿里云控制台的密码
      */
-    private String FTP_PASSWORD = "ftp用户密码";
+    private String FTP_PASSWORD = "Lu123456";
 
     /**
      * 基本路径，用户图片
      */
-    private String FTP_BASEPATH = "/home/ftptest/tenement/house_images";
+    private String FTP_BASEPATH = "/home/upload-file";
 
     /**
      * 下载地址地基础url，这个是配置的图片服务器的地址,最后访问图片时候，需要用该基础地址
      */
-    private String IMAGE_BASE_URL = "url";
+    private String IMAGE_BASE_URL = "linux";
 
     public String getFTP_ADDRESS() {
         return FTP_ADDRESS;
@@ -89,4 +92,15 @@ public class FtpConfig {
         FTP_BASEPATH = fTP_BASEPATH;
     }
 
+    @Override
+    public String toString() {
+        return "FtpConfig{" +
+                "FTP_ADDRESS='" + FTP_ADDRESS + '\'' +
+                ", FTP_PORT='" + FTP_PORT + '\'' +
+                ", FTP_USERNAME='" + FTP_USERNAME + '\'' +
+                ", FTP_PASSWORD='" + FTP_PASSWORD + '\'' +
+                ", FTP_BASEPATH='" + FTP_BASEPATH + '\'' +
+                ", IMAGE_BASE_URL='" + IMAGE_BASE_URL + '\'' +
+                '}';
+    }
 }

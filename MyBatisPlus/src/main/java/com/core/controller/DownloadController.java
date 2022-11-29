@@ -1,10 +1,13 @@
 package com.core.controller;
 
+import cn.hutool.http.HttpUtil;
+import com.core.common.util.FtpUtil;
 import com.upload.common.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.hwpf.HWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.util.ResourceUtils;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -14,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLEncoder;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
@@ -38,9 +42,9 @@ public class DownloadController {
     public Result<?> uploadFile(MultipartFile file) {
         //file是一个临时文件，需要转存到指定位置，否则本次请求完成后临时文件会删除
         log.info(file.toString());
-        //1、获得原始文件名称
+        //获得原始文件名称
         String originalFilename = file.getOriginalFilename();
-        //1.1、截取原始文件名后缀 .jpg  / .png等
+        //截取原始文件名后缀 .jpg  / .png等
         String suffix = originalFilename.substring(originalFilename.lastIndexOf("."));
 
         //2、使用UUID重新生成文件名，防止文件名称重复造成文件覆盖
@@ -68,7 +72,7 @@ public class DownloadController {
      * @return
      */
     @PostMapping("/uploadLinux")
-    public Result<?> uploadLinux(MultipartFile file) {
+    public Result<?> uploadLinux(MultipartFile file) throws IOException {
         //file是一个临时文件，需要转存到指定位置，否则本次请求完成后临时文件会删除
         log.info(file.toString());
         //1、获得原始文件名称
@@ -79,20 +83,25 @@ public class DownloadController {
         //2、使用UUID重新生成文件名，防止文件名称重复造成文件覆盖
         String dataStr = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
         String fileName = dataStr + suffix;
-        //创建一个目录对象
-        File dir = new File(serverPath);
-        //3、判断当前目录是否存在
-        if(!dir.exists()){
-            //目录不存在，需要创建
-            dir.mkdirs();
-        }
 
-        try {
-            //将临时文件转存到指定位置
-            file.transferTo(new File(serverPath + fileName));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
+        FtpUtil.pictureUploadByConfig(fileName, serverPath, file.getInputStream());
+
+
+//        //创建一个目录对象
+//        File dir = new File(serverPath);
+//        //3、判断当前目录是否存在
+//        if(!dir.exists()){
+//            //目录不存在，需要创建
+//            dir.mkdirs();
+//        }
+//
+//        try {
+//            //将临时文件转存到指定位置
+//            file.transferTo(new File(serverPath + fileName));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         return Result.ok(fileName+"文件上传Linux成功");
     }
 
@@ -217,5 +226,27 @@ public class DownloadController {
         bufferedOutputStream.write(buffer);
         bufferedOutputStream.flush();
         bufferedOutputStream.close();
+    }
+    /**
+     * springboot项目下载网络文件到本地,返回网络路径   https://blog.csdn.net/qq_27348837/article/details/104690215
+     * 预览图片路径转下载图片路径
+     * @param fileUrl  http://localhost:8062/sky/img/avatorImages/1647277665830invoice.png
+     */
+    @GetMapping("/previewToDownload")
+    public synchronized String previewToDownload(String fileUrl) throws FileNotFoundException {
+        // 后缀
+        String suffix = fileUrl.substring(fileUrl.lastIndexOf("."));
+        System.out.println("后缀="+suffix);
+        // 文件名
+        String fileName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+        System.out.println("文件名="+fileName);
+        // 下载路径
+        String download_path = "profile/" + fileName + suffix;
+        // 保存图片到服务器的路径
+        String save_path = basePath + fileName + suffix;
+        System.out.println("保存路径=="+save_path);
+        // hutool方式：网络文件保存到服务器
+        HttpUtil.downloadFile(fileUrl, save_path);
+        return download_path;
     }
 }
