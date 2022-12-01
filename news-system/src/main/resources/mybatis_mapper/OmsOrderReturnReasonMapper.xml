@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stars.mapper.shoppingMall.OmsOrderReturnReasonMapper">
+    <resultMap id="BaseResultMap" type="com.stars.pojo.shoppingMall.OmsOrderReturnReason">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, name, sort, status, create_time
+    </sql>
+
+    <select id="selectWay" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from oms_order_return_reason
+        order by oms_order_return_reason.sort Desc
+    </select>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <insert id="insertWay" parameterType="com.stars.pojo.shoppingMall.OmsOrderReturnReason">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into oms_order_return_reason
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null">
+                name,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="status != null">
+                status,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+        </trim>
+    </insert>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="updateWay" parameterType="com.stars.pojo.shoppingMall.OmsOrderReturnReason">
+        update oms_order_return_reason
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <delete id="deleteWay" parameterType="java.lang.Long">
+        delete from oms_order_return_reason
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+</mapper>

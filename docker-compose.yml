@@ -1,0 +1,57 @@
+# docker-compose版本
+version: '3'
+services:
+  news-mysql:
+    # 数据卷--同步共享
+    volumes:
+      # 数据文件
+      - ./db/data:/var/lib/mysql
+      # 配置文件
+      - ./db/conf:/etc/mysql/conf.d
+      # 数据库初始化脚本，当Mysql容器首次启动时，会在 /docker-entrypoint-initdb.d目录下扫描 .sh，.sql，.sql.gz类型的文件。如果这些类型的文件存在，将执行它们来初始化一个数据库；
+      - ./db/init/:/docker-entrypoint-initdb.d/
+    # 添加环境变量
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_HOST: '%'
+    # 重新启动容器
+    # no默认的重启策略，在任何情况下都不会重启容器
+    # always容器总是重新启动
+    # on-failure故障错误重新启动
+    restart: always
+    # 自定义容器名称
+    container_name: news-mysql
+    # 指定容器运行的镜像
+    image: mysql:5.7
+    # 暴露端口
+    ports:
+      - 3306:3306
+    # 覆盖容器启动后默认执行的命令
+    command:
+      --character-set-server=utf8mb4
+      --collation-server=utf8mb4_general_ci
+#      --explicit_defaults_for_timestamp=true
+#      --lower_case_table_names=1
+#      --max_allowed_packet=128M
+#      --default-authentication-plugin=caching_sha2_password
+  news-redis:
+    image: redis
+    ports:
+      - 6379:6379
+    restart: always
+    hostname: news-redis
+    container_name: news-redis
+  news-springboot:
+    # 指定为构建镜像上下文路径,该路径要有Dockerfile文档
+    build:
+      context: ./news-system/
+    restart: on-failure
+    # 设置依赖关系
+    depends_on:
+      - news-mysql
+      - news-redis
+    container_name: news-springboot
+    image: springboot
+    hostname: news-springboot
+    ports:
+      - 8062:8062

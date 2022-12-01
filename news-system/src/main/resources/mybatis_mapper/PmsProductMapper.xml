@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stars.mapper.shoppingMall.PmsProductMapper">
+    <resultMap id="BaseResultMap" type="com.stars.pojo.shoppingMall.PmsProduct">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="brand_id" jdbcType="BIGINT" property="brandId" />
+        <result column="product_category_id" jdbcType="BIGINT" property="productCategoryId" />
+        <result column="feight_template_id" jdbcType="BIGINT" property="feightTemplateId" />
+        <result column="product_attribute_category_id" jdbcType="BIGINT" property="productAttributeCategoryId" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="pic" jdbcType="VARCHAR" property="pic" />
+        <result column="product_sn" jdbcType="VARCHAR" property="productSn" />
+        <result column="delete_status" jdbcType="INTEGER" property="deleteStatus" />
+        <result column="publish_status" jdbcType="INTEGER" property="publishStatus" />
+        <result column="new_status" jdbcType="INTEGER" property="newStatus" />
+        <result column="recommand_status" jdbcType="INTEGER" property="recommandStatus" />
+        <result column="verify_status" jdbcType="INTEGER" property="verifyStatus" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+        <result column="sale" jdbcType="INTEGER" property="sale" />
+        <result column="price" jdbcType="DECIMAL" property="price" />
+        <result column="promotion_price" jdbcType="DECIMAL" property="promotionPrice" />
+        <result column="gift_growth" jdbcType="INTEGER" property="giftGrowth" />
+        <result column="gift_point" jdbcType="INTEGER" property="giftPoint" />
+        <result column="use_point_limit" jdbcType="INTEGER" property="usePointLimit" />
+        <result column="sub_title" jdbcType="VARCHAR" property="subTitle" />
+        <result column="original_price" jdbcType="DECIMAL" property="originalPrice" />
+        <result column="stock" jdbcType="INTEGER" property="stock" />
+        <result column="low_stock" jdbcType="INTEGER" property="lowStock" />
+        <result column="unit" jdbcType="VARCHAR" property="unit" />
+        <result column="weight" jdbcType="DECIMAL" property="weight" />
+        <result column="preview_status" jdbcType="INTEGER" property="previewStatus" />
+        <result column="service_ids" jdbcType="VARCHAR" property="serviceIds" />
+        <result column="keywords" jdbcType="VARCHAR" property="keywords" />
+        <result column="note" jdbcType="VARCHAR" property="note" />
+        <result column="album_pics" jdbcType="VARCHAR" property="albumPics" />
+        <result column="detail_title" jdbcType="VARCHAR" property="detailTitle" />
+        <result column="promotion_start_time" jdbcType="TIMESTAMP" property="promotionStartTime" />
+        <result column="promotion_end_time" jdbcType="TIMESTAMP" property="promotionEndTime" />
+        <result column="promotion_per_limit" jdbcType="INTEGER" property="promotionPerLimit" />
+        <result column="promotion_type" jdbcType="INTEGER" property="promotionType" />
+        <result column="brand_name" jdbcType="VARCHAR" property="brandName" />
+        <result column="product_category_name" jdbcType="VARCHAR" property="productCategoryName" />
+
+        <result column="description" jdbcType="LONGVARCHAR" property="description" />
+        <result column="detail_desc" jdbcType="LONGVARCHAR" property="detailDesc" />
+        <result column="detail_html" jdbcType="LONGVARCHAR" property="detailHtml" />
+        <result column="detail_mobile_html" jdbcType="LONGVARCHAR" property="detailMobileHtml" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, brand_id, product_category_id, feight_template_id, product_attribute_category_id,
+    name, pic, product_sn, delete_status, publish_status, new_status, recommand_status,
+    verify_status, sort, sale, price, promotion_price, gift_growth, gift_point, use_point_limit,
+    sub_title, original_price, stock, low_stock, unit, weight, preview_status, service_ids,
+    keywords, note, album_pics, detail_title, promotion_start_time, promotion_end_time,
+    promotion_per_limit, promotion_type, brand_name, product_category_name, description, detail_desc
+    </sql>
+
+    <resultMap id="getListWithAttrMap" type="com.stars.apiParams.PmsProductAddParam" extends="BaseResultMap">
+        <collection property="productLadderList" columnPrefix="ti_" resultMap="com.stars.mapper.shoppingMall.PmsProductLadderMapper.BaseResultMap"></collection>
+        <collection property="productFullReductionList" columnPrefix="man_" resultMap="com.stars.mapper.shoppingMall.PmsProductFullReductionMapper.BaseResultMap"></collection>
+        <collection property="memberPriceList" columnPrefix="huiyuan_" resultMap="com.stars.mapper.shoppingMall.PmsMemberPriceMapper.BaseResultMap"></collection>
+        <collection property="skuStockList" columnPrefix="cun_" resultMap="com.stars.mapper.shoppingMall.PmsSkuStockMapper.BaseResultMap"></collection>
+        <collection property="productAttributeValueList" columnPrefix="xing_" resultMap="com.stars.mapper.shoppingMall.PmsProductAttributeValueMapper.BaseResultMap"></collection>
+        <collection property="subjectProductRelationList" columnPrefix="zhuan_" resultMap="com.stars.mapper.shoppingMall.CmsSubjectProductRelationMapper.BaseResultMap"></collection>
+        <collection property="prefrenceAreaProductRelationList" columnPrefix="you_" resultMap="com.stars.mapper.shoppingMall.CmsPrefrenceAreaProductRelationMapper.BaseResultMap"></collection>
+    </resultMap>
+
+        <select id="selectWay" resultMap="getListWithAttrMap" parameterType="com.stars.apiParams.PmsProductListParam">
+            select
+            pin.*,
+            wa.id ti_id,
+            wa.product_id ti_product_id,
+            wa.count ti_count,
+            wa.discount ti_discount,
+            wa.price ti_price,
+            sa.id man_id,
+            sa.product_id man_product_id,
+            sa.full_price man_full_price,
+            sa.reduce_price man_reduce_price,
+            ta.id huiyuan_id,
+            ta.product_id huiyuan_product_id,
+            ta.member_level_id huiyuan_member_level_id,
+            ta.member_price huiyuan_member_price,
+            ta.member_level_name huiyuan_member_level_name,
+            ya.id cun_id,
+            ya.product_id cun_product_id,
+            ya.sku_code cun_sku_code,
+            ya.price cun_price,
+            ya.stock cun_stock,
+            ya.low_stock cun_low_stock,
+            ya.pic cun_pic,
+            ya.sale cun_sale,
+            ya.promotion_price cun_promotion_price,
+            ya.lock_stock cun_lock_stock,
+            ya.sp_data cun_sp_data,
+            va.id xing_id,
+            va.product_id xing_product_id,
+            va.product_attribute_id xing_product_attribute_id,
+            va.value xing_value,
+            fa.id zhuan_id,
+            fa.subject_id zhuan_subject_id,
+            fa.product_id zhuan_product_id,
+            xa.id you_id,
+            xa.prefrence_area_id you_prefrence_area_id,
+            xa.product_id you_product_id
+            from pms_product pin
+            LEFT JOIN pms_product_ladder wa ON pin.id = wa.product_id
+            LEFT JOIN pms_product_full_reduction sa ON pin.id = sa.product_id
+            LEFT JOIN pms_member_price ta ON pin.id = ta.product_id
+            LEFT JOIN pms_sku_stock ya ON pin.id = ya.product_id
+            LEFT JOIN pms_product_attribute_value va ON pin.id = va.product_id
+            LEFT JOIN cms_subject_product_relation fa ON pin.id = fa.product_id
+            LEFT JOIN cms_prefrence_area_product_relation xa ON pin.id = xa.product_id
+            <where>
+                <if test="keyword != null">
+                    pin.name like concat("%", #{keyword, jdbcType=VARCHAR}, "%")
+                </if>
+                <if test="productSn != null and productSn != ''">
+                    and pin.product_sn = #{productSn, jdbcType=VARCHAR}
+                </if>
+                <if test="productCategoryId != null">
+                    and pin.product_category_id = #{productCategoryId, jdbcType=INTEGER}
+                </if>
+                <if test="brandId != null">
+                    and pin.brand_id = #{brandId, jdbcType=INTEGER}
+                </if>
+                <if test="publishStatus != null">
+                    and pin.publish_status = #{publishStatus, jdbcType=INTEGER}
+                </if>
+                <if test="verifyStatus != null">
+                    and pin.verify_status = #{verifyStatus, jdbcType=INTEGER}
+                </if>
+            </where>
+            group by pin.id
+            order by pin.sort Desc
+        </select>
+
+<!--    <select id="selectWay" resultMap="BaseResultMap" parameterType="com.stars.apiParams.PmsProductListParam">-->
+<!--        select-->
+<!--        *-->
+<!--        from pms_product-->
+<!--        <where>-->
+<!--            <if test="keyword != null">-->
+<!--                name like concat("%", #{keyword, jdbcType=VARCHAR}, "%")-->
+<!--            </if>-->
+<!--            <if test="productSn != null and productSn != ''">-->
+<!--                and product_sn = #{productSn, jdbcType=VARCHAR}-->
+<!--            </if>-->
+<!--            <if test="productCategoryId != null">-->
+<!--                and product_category_id = #{productCategoryId, jdbcType=INTEGER}-->
+<!--            </if>-->
+<!--            <if test="brandId != null">-->
+<!--                and brand_id = #{brandId, jdbcType=INTEGER}-->
+<!--            </if>-->
+<!--            <if test="publishStatus != null">-->
+<!--                and publish_status = #{publishStatus, jdbcType=INTEGER}-->
+<!--            </if>-->
+<!--            <if test="verifyStatus != null">-->
+<!--                and verify_status = #{verifyStatus, jdbcType=INTEGER}-->
+<!--            </if>-->
+<!--        </where>-->
+<!--        order by pms_product.sort Desc-->
+<!--    </select>-->
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <insert id="insertWay" parameterType="com.stars.apiParams.PmsProductAddParam">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into pms_product
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="brandId != null">
+                brand_id,
+            </if>
+            <if test="productCategoryId != null">
+                product_category_id,
+            </if>
+            <if test="feightTemplateId != null">
+                feight_template_id,
+            </if>
+            <if test="productAttributeCategoryId != null">
+                product_attribute_category_id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="pic != null">
+                pic,
+            </if>
+            <if test="productSn != null">
+                product_sn,
+            </if>
+            <if test="deleteStatus != null">
+                delete_status,
+            </if>
+            <if test="publishStatus != null">
+                publish_status,
+            </if>
+            <if test="newStatus != null">
+                new_status,
+            </if>
+            <if test="recommandStatus != null">
+                recommand_status,
+            </if>
+            <if test="verifyStatus != null">
+                verify_status,
+            </if>
+            <if test="sort != null">
+                sort,
+            </if>
+            <if test="sale != null">
+                sale,
+            </if>
+            <if test="price != null">
+                price,
+            </if>
+            <if test="promotionPrice != null">
+                promotion_price,
+            </if>
+            <if test="giftGrowth != null">
+                gift_growth,
+            </if>
+            <if test="giftPoint != null">
+                gift_point,
+            </if>
+            <if test="usePointLimit != null">
+                use_point_limit,
+            </if>
+            <if test="subTitle != null">
+                sub_title,
+            </if>
+            <if test="originalPrice != null">
+                original_price,
+            </if>
+            <if test="stock != null">
+                stock,
+            </if>
+            <if test="lowStock != null">
+                low_stock,
+            </if>
+            <if test="unit != null">
+                unit,
+            </if>
+            <if test="weight != null">
+                weight,
+            </if>
+            <if test="previewStatus != null">
+                preview_status,
+            </if>
+            <if test="serviceIds != null">
+                service_ids,
+            </if>
+            <if test="keywords != null">
+                keywords,
+            </if>
+            <if test="note != null">
+                note,
+            </if>
+            <if test="albumPics != null">
+                album_pics,
+            </if>
+            <if test="detailTitle != null">
+                detail_title,
+            </if>
+            <if test="promotionStartTime != null">
+                promotion_start_time,
+            </if>
+            <if test="promotionEndTime != null">
+                promotion_end_time,
+            </if>
+            <if test="promotionPerLimit != null">
+                promotion_per_limit,
+            </if>
+            <if test="promotionType != null">
+                promotion_type,
+            </if>
+            <if test="brandName != null">
+                brand_name,
+            </if>
+            <if test="productCategoryName != null">
+                product_category_name,
+            </if>
+            <if test="description != null">
+                description,
+            </if>
+            <if test="detailDesc != null">
+                detail_desc,
+            </if>
+            <if test="detailHtml != null">
+                detail_html,
+            </if>
+            <if test="detailMobileHtml != null">
+                detail_mobile_html,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="brandId != null">
+                #{brandId,jdbcType=BIGINT},
+            </if>
+            <if test="productCategoryId != null">
+                #{productCategoryId,jdbcType=BIGINT},
+            </if>
+            <if test="feightTemplateId != null">
+                #{feightTemplateId,jdbcType=BIGINT},
+            </if>
+            <if test="productAttributeCategoryId != null">
+                #{productAttributeCategoryId,jdbcType=BIGINT},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="pic != null">
+                #{pic,jdbcType=VARCHAR},
+            </if>
+            <if test="productSn != null">
+                #{productSn,jdbcType=VARCHAR},
+            </if>
+            <if test="deleteStatus != null">
+                #{deleteStatus,jdbcType=INTEGER},
+            </if>
+            <if test="publishStatus != null">
+                #{publishStatus,jdbcType=INTEGER},
+            </if>
+            <if test="newStatus != null">
+                #{newStatus,jdbcType=INTEGER},
+            </if>
+            <if test="recommandStatus != null">
+                #{recommandStatus,jdbcType=INTEGER},
+            </if>
+            <if test="verifyStatus != null">
+                #{verifyStatus,jdbcType=INTEGER},
+            </if>
+            <if test="sort != null">
+                #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="sale != null">
+                #{sale,jdbcType=INTEGER},
+            </if>
+            <if test="price != null">
+                #{price,jdbcType=DECIMAL},
+            </if>
+            <if test="promotionPrice != null">
+                #{promotionPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="giftGrowth != null">
+                #{giftGrowth,jdbcType=INTEGER},
+            </if>
+            <if test="giftPoint != null">
+                #{giftPoint,jdbcType=INTEGER},
+            </if>
+            <if test="usePointLimit != null">
+                #{usePointLimit,jdbcType=INTEGER},
+            </if>
+            <if test="subTitle != null">
+                #{subTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="originalPrice != null">
+                #{originalPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="stock != null">
+                #{stock,jdbcType=INTEGER},
+            </if>
+            <if test="lowStock != null">
+                #{lowStock,jdbcType=INTEGER},
+            </if>
+            <if test="unit != null">
+                #{unit,jdbcType=VARCHAR},
+            </if>
+            <if test="weight != null">
+                #{weight,jdbcType=DECIMAL},
+            </if>
+            <if test="previewStatus != null">
+                #{previewStatus,jdbcType=INTEGER},
+            </if>
+            <if test="serviceIds != null">
+                #{serviceIds,jdbcType=VARCHAR},
+            </if>
+            <if test="keywords != null">
+                #{keywords,jdbcType=VARCHAR},
+            </if>
+            <if test="note != null">
+                #{note,jdbcType=VARCHAR},
+            </if>
+            <if test="albumPics != null">
+                #{albumPics,jdbcType=VARCHAR},
+            </if>
+            <if test="detailTitle != null">
+                #{detailTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="promotionStartTime != null">
+                #{promotionStartTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="promotionEndTime != null">
+                #{promotionEndTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="promotionPerLimit != null">
+                #{promotionPerLimit,jdbcType=INTEGER},
+            </if>
+            <if test="promotionType != null">
+                #{promotionType,jdbcType=INTEGER},
+            </if>
+            <if test="brandName != null">
+                #{brandName,jdbcType=VARCHAR},
+            </if>
+            <if test="productCategoryName != null">
+                #{productCategoryName,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                #{description,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="detailDesc != null">
+                #{detailDesc,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="detailHtml != null">
+                #{detailHtml,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="detailMobileHtml != null">
+                #{detailMobileHtml,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="updateWay" parameterType="com.stars.apiParams.PmsProductAddParam">
+        update pms_product
+        <set>
+            <if test="brandId != null">
+                brand_id = #{brandId,jdbcType=BIGINT},
+            </if>
+            <if test="productCategoryId != null">
+                product_category_id = #{productCategoryId,jdbcType=BIGINT},
+            </if>
+            <if test="feightTemplateId != null">
+                feight_template_id = #{feightTemplateId,jdbcType=BIGINT},
+            </if>
+            <if test="productAttributeCategoryId != null">
+                product_attribute_category_id = #{productAttributeCategoryId,jdbcType=BIGINT},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="pic != null">
+                pic = #{pic,jdbcType=VARCHAR},
+            </if>
+            <if test="productSn != null">
+                product_sn = #{productSn,jdbcType=VARCHAR},
+            </if>
+            <if test="deleteStatus != null">
+                delete_status = #{deleteStatus,jdbcType=INTEGER},
+            </if>
+            <if test="publishStatus != null">
+                publish_status = #{publishStatus,jdbcType=INTEGER},
+            </if>
+            <if test="newStatus != null">
+                new_status = #{newStatus,jdbcType=INTEGER},
+            </if>
+            <if test="recommandStatus != null">
+                recommand_status = #{recommandStatus,jdbcType=INTEGER},
+            </if>
+            <if test="verifyStatus != null">
+                verify_status = #{verifyStatus,jdbcType=INTEGER},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="sale != null">
+                sale = #{sale,jdbcType=INTEGER},
+            </if>
+            <if test="price != null">
+                price = #{price,jdbcType=DECIMAL},
+            </if>
+            <if test="promotionPrice != null">
+                promotion_price = #{promotionPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="giftGrowth != null">
+                gift_growth = #{giftGrowth,jdbcType=INTEGER},
+            </if>
+            <if test="giftPoint != null">
+                gift_point = #{giftPoint,jdbcType=INTEGER},
+            </if>
+            <if test="usePointLimit != null">
+                use_point_limit = #{usePointLimit,jdbcType=INTEGER},
+            </if>
+            <if test="subTitle != null">
+                sub_title = #{subTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="originalPrice != null">
+                original_price = #{originalPrice,jdbcType=DECIMAL},
+            </if>
+            <if test="stock != null">
+                stock = #{stock,jdbcType=INTEGER},
+            </if>
+            <if test="lowStock != null">
+                low_stock = #{lowStock,jdbcType=INTEGER},
+            </if>
+            <if test="unit != null">
+                unit = #{unit,jdbcType=VARCHAR},
+            </if>
+            <if test="weight != null">
+                weight = #{weight,jdbcType=DECIMAL},
+            </if>
+            <if test="previewStatus != null">
+                preview_status = #{previewStatus,jdbcType=INTEGER},
+            </if>
+            <if test="serviceIds != null">
+                service_ids = #{serviceIds,jdbcType=VARCHAR},
+            </if>
+            <if test="keywords != null">
+                keywords = #{keywords,jdbcType=VARCHAR},
+            </if>
+            <if test="note != null">
+                note = #{note,jdbcType=VARCHAR},
+            </if>
+            <if test="albumPics != null">
+                album_pics = #{albumPics,jdbcType=VARCHAR},
+            </if>
+            <if test="detailTitle != null">
+                detail_title = #{detailTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="promotionStartTime != null">
+                promotion_start_time = #{promotionStartTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="promotionEndTime != null">
+                promotion_end_time = #{promotionEndTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="promotionPerLimit != null">
+                promotion_per_limit = #{promotionPerLimit,jdbcType=INTEGER},
+            </if>
+            <if test="promotionType != null">
+                promotion_type = #{promotionType,jdbcType=INTEGER},
+            </if>
+            <if test="brandName != null">
+                brand_name = #{brandName,jdbcType=VARCHAR},
+            </if>
+            <if test="productCategoryName != null">
+                product_category_name = #{productCategoryName,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="detailDesc != null">
+                detail_desc = #{detailDesc,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="detailHtml != null">
+                detail_html = #{detailHtml,jdbcType=LONGVARCHAR},
+            </if>
+            <if test="detailMobileHtml != null">
+                detail_mobile_html = #{detailMobileHtml,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="update_deleteStatus" parameterType="Map">
+        update pms_product
+        <set>
+            <if test="deleteStatus != null">
+                delete_status = #{deleteStatus,jdbcType=BIGINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+</mapper>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stars.mapper.shoppingMall.UmsRoleMapper">
+    <resultMap id="BaseResultMap" type="com.stars.pojo.shoppingMall.UmsRole">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="role_code" jdbcType="VARCHAR" property="roleCode" />
+        <result column="description" jdbcType="VARCHAR" property="description" />
+        <result column="admin_count" jdbcType="INTEGER" property="adminCount" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, name, role_code, description, admin_count, create_time, status, sort
+    </sql>
+
+    <select id="selectWay" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List" />
+        from ums_role
+        <where>
+            <if test="name != null">
+                name like #{name, jdbcType=VARCHAR}
+            </if>
+        </where>
+        order by ums_role.sort Desc
+    </select>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <insert id="insertWay" parameterType="com.stars.pojo.shoppingMall.UmsRole">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into ums_role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null" >
+                `name`,
+            </if>
+            <if test="roleCode != null" >
+                `role_code`,
+            </if>
+            <if test="description != null" >
+                description,
+            </if>
+            <if test="adminCount != null" >
+                admin_count,
+            </if>
+            <if test="createTime != null" >
+                create_time,
+            </if>
+            <if test="status != null" >
+                status,
+            </if>
+            <if test="sort != null" >
+                sort,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null" >
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="roleCode != null" >
+                #{role_code,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null" >
+                #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="adminCount != null" >
+                #{adminCount,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null" >
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null" >
+                #{status,jdbcType=INTEGER},
+            </if>
+            <if test="sort != null" >
+                #{sort,jdbcType=INTEGER},
+            </if>
+        </trim>
+    </insert>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="updateWay" parameterType="com.stars.pojo.shoppingMall.UmsRole">
+        update ums_role
+        <set>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="roleCode != null">
+                role_code = #{role_code,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="adminCount != null">
+                admin_count = #{adminCount,jdbcType=INTEGER},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <delete id="deleteWay" parameterType="java.lang.Long">
+        delete from ums_role
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+</mapper>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stars.mapper.shoppingMall.UmsResourceMapper">
+    <resultMap id="BaseResultMap" type="com.stars.pojo.shoppingMall.UmsResource">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="url" jdbcType="VARCHAR" property="url" />
+        <result column="description" jdbcType="VARCHAR" property="description" />
+        <result column="category_id" jdbcType="BIGINT" property="categoryId" />
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, create_time, name, url, description, category_id
+    </sql>
+    <select id="selectWay" resultMap="BaseResultMap" parameterType="Map">
+        select
+        <include refid="Base_Column_List" />
+        from ums_resource
+        <where>
+            <if test="categoryId != null">
+                category_id = #{categoryId, jdbcType=INTEGER}
+            </if>
+            <if test="nameKeyword != null">
+                and `name` like #{nameKeyword, jdbcType=VARCHAR}
+            </if>
+            <if test="urlKeyword != null">
+                and url like #{urlKeyword, jdbcType=VARCHAR}
+            </if>
+        </where>
+    </select>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <insert id="insertWay" parameterType="com.stars.pojo.shoppingMall.UmsResource">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into ums_resource (create_time, name, url,
+        description, category_id)
+        values (#{createTime,jdbcType=TIMESTAMP}, #{name,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR},
+        #{description,jdbcType=VARCHAR}, #{categoryId,jdbcType=BIGINT})
+    </insert>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="updateWay" parameterType="com.stars.pojo.shoppingMall.UmsResource">
+        update ums_resource
+        <set>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="url != null">
+                url = #{url,jdbcType=VARCHAR},
+            </if>
+            <if test="description != null">
+                description = #{description,jdbcType=VARCHAR},
+            </if>
+            <if test="categoryId != null">
+                category_id = #{categoryId,jdbcType=BIGINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <delete id="deleteWay" parameterType="java.lang.Long">
+        delete from ums_resource
+        where id = #{id,jdbcType=BIGINT}
+    </delete>
+</mapper>

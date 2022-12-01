@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stars.mapper.shoppingMall.UmsMenuMapper">
+    <resultMap id="BaseResultMap" type="com.stars.pojo.shoppingMall.UmsMenu">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="menu_parent_id" jdbcType="BIGINT" property="menuParentId" />
+        <result column="router_parent_id" jdbcType="INTEGER" property="routerParentId" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="title" jdbcType="VARCHAR" property="title" />
+        <result column="perms" jdbcType="VARCHAR" property="perms" />
+        <result column="menu_level" jdbcType="INTEGER" property="menuLevel" />
+        <result column="router_level" jdbcType="INTEGER" property="routerLevel" />
+        <result column="sort" jdbcType="INTEGER" property="sort" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="icon" jdbcType="VARCHAR" property="icon" />
+        <result column="hidden" jdbcType="INTEGER" property="hidden" />
+        <result column="disabled" jdbcType="INTEGER" property="disabled" />
+        <result column="path" jdbcType="VARCHAR" property="path" />
+        <result column="cache" jdbcType="INTEGER" property="cache" />
+        <result column="subject" jdbcType="VARCHAR" property="subject" />
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, menu_parent_id, create_time, title, perms, menu_level, router_level, sort, name, icon, hidden, disabled, path, cache, router_parent_id, subject
+    </sql>
+
+    <select id="queryUserAuths" resultType="String" parameterType="String">
+        SELECT ask1.perms FROM (
+            SELECT p.*
+            FROM  ums_menu p
+            WHERE exists(
+                select a.id from ums_role_menu_relation a
+                join ums_role b on a.role_id = b.id
+                join ums_admin_role_relation c on c.role_id = b.id
+                join ums_admin d on d.id = c.admin_id
+                where p.id = a.menu_id AND d.username = #{username,jdbcType=VARCHAR}
+            )
+        ) ask1
+        where ask1.perms is not null
+        order by ask1.sort Desc
+    </select>
+
+    <select id="selectWay" resultMap="BaseResultMap" parameterType="String">
+        select
+        <include refid="Base_Column_List" />
+        from ums_menu
+        <where>
+            <if test="subject != null">
+                subject = #{subject, jdbcType=INTEGER}
+            </if>
+        </where>
+        order by ums_menu.sort Desc
+    </select>
+
+    <select id="btnWay" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from ums_menu
+        where perms != '' || perms != null
+        order by ums_menu.sort Desc
+    </select>
+
+    <select id="rowWay" resultMap="BaseResultMap" parameterType="Long">
+        select
+        <include refid="Base_Column_List" />
+        from ums_menu
+        <where>
+            <if test="menuParentId != null">
+                id = #{menuParentId, jdbcType=INTEGER}
+            </if>
+        </where>
+    </select>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <insert id="insertWay" parameterType="com.stars.pojo.shoppingMall.UmsMenu">
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into ums_menu (menu_parent_id, create_time, title, perms,
+        menu_level, router_level, sort, name,
+        icon, hidden, disabled, path, cache, router_parent_id, subject)
+        values (#{menuParentId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{title,jdbcType=VARCHAR}, #{perms,jdbcType=VARCHAR},
+        #{menuLevel,jdbcType=INTEGER}, #{routerLevel,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR},
+        #{icon,jdbcType=VARCHAR}, #{hidden,jdbcType=INTEGER}, #{disabled,jdbcType=INTEGER}, #{path,jdbcType=VARCHAR}, #{cache,jdbcType=INTEGER}, #{routerParentId,jdbcType=INTEGER}, #{subject,jdbcType=VARCHAR})
+    </insert>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="updateWay" parameterType="com.stars.pojo.shoppingMall.UmsMenu">
+        update ums_menu
+        <set>
+            <if test="menuParentId != null">
+                menu_parent_id = #{menuParentId,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="title != null">
+                title = #{title,jdbcType=VARCHAR},
+            </if>
+            <if test="perms != null">
+                perms = #{perms,jdbcType=VARCHAR},
+            </if>
+            <if test="menuLevel != null">
+                menu_level = #{menuLevel,jdbcType=INTEGER},
+            </if>
+            <if test="routerLevel != null">
+                router_level = #{routerLevel,jdbcType=INTEGER},
+            </if>
+            <if test="sort != null">
+                sort = #{sort,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="icon != null">
+                icon = #{icon,jdbcType=VARCHAR},
+            </if>
+            <if test="hidden != null">
+                hidden = #{hidden,jdbcType=INTEGER},
+            </if>
+            <if test="disabled != null">
+                disabled = #{disabled,jdbcType=INTEGER},
+            </if>
+            <if test="path != null">
+                path = #{path,jdbcType=VARCHAR},
+            </if>
+            <if test="cache != null">
+                cache = #{cache,jdbcType=INTEGER},
+            </if>
+            <if test="routerParentId != null">
+                router_parent_id = #{routerParentId,jdbcType=INTEGER},
+            </if>
+            <if test="subject != null">
+                subject = #{subject,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <delete id="deleteWay" parameterType="List">
+        delete from ums_menu
+        where id in(
+        <foreach collection="ids" item="item" separator="," index="index">
+            #{item,jdbcType=BIGINT}
+        </foreach>
+        )
+    </delete>
+</mapper>

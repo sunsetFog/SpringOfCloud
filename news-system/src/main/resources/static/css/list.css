@@ -1,0 +1,28 @@
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-style: hidden;
+    box-shadow: 0 0 0 1px #ECECEC;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #ECECEC;
+    padding: 5px;
+}
+thead th {
+    height: 48px;
+    font-weight: 400;
+    font-size: 14px;
+    background: #909399;
+    color: #fff;
+}
+tbody td {
+    height: 40px;
+    font-size: 13px;
+    color: #495060;
+}

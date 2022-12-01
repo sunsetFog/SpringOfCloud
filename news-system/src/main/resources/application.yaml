@@ -1,0 +1,187 @@
+# 配置呀ml   会注入到配置类中
+# 树形结构，可读性更强，更强约束性
+# 呀ml能读取的放置位置和优先级（顺序排了）  file:./config/   file:./   classpath:/config    classpath:/
+# 现在放这classpath:/    classpath（类目录）：项目/src/main/resources/    file（项目名下）：项目名/**
+server:
+  port: 8060
+  servlet:
+    # 虚拟路径
+    context-path: /sky
+  max-http-header-size: 102400
+
+spring:
+#  study: rabbitmq消息中间件配置
+  rabbitmq:
+    username: admin
+    password: admin
+    virtual-host: /
+    host: 39.108.174.145
+    port: 5672
+  # 上传文件大小  study: uploadImg
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  # 关闭模板引擎缓存
+  thymeleaf:
+    cache: false
+  mvc:
+    # 关闭默认浏览器窗口图标   2.*版本没有效果就算了
+    favicon:
+      enabled: false
+    # 设置日期格式  yyyy-MM-dd HH:mm:ss
+    format:
+      date: yyyy-MM-dd
+  # 多环境配置  激活**环境
+  profiles:
+    active: dev
+  # study: MYSQL Driver  连接数据库
+  datasource:
+    username: root
+    password: root
+    # serverTimezone时区 中国    useSSL=false不使用安全连接    characterEncoding字符集编码
+    # 可选localhost、127.0.0.1、容器名
+    # C:\Windows\System32\drivers\etc\HOSTS文件需要映射才能连接上news-mysql容器
+    # 写容器名就不需要映射啦
+    url: jdbc:mysql://news-mysql:3306/db_news?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    # 驱动   mysql8: com.mysql.cj.jdbc.Driver      mysql5: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.jdbc.Driver
+    # study: Druid切换数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    # druid数据源专有配置
+      # 配置初始化大小、最小、最大线程数
+    initialSize: 5
+    minIdle: 5
+    # CPU核数+1，也可以大些但不要超过20，数据库加锁时连接过多性能下降
+    maxActive: 20
+    # 最大等待时间，内网：800，外网：1200（三次握手1s）
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    # 配置一个连接在池中最大空间时间，单位是毫秒
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 1 FROM DUAL
+    testWhileIdle: true
+    # 设置从连接池获取连接时是否检查连接有效性，true检查，false不检查
+    testOnBorrow: true
+    # 设置从连接池归还连接时是否检查连接有效性，true检查，false不检查
+    testOnReturn: true
+    # 可以支持PSCache（提升写入、查询效率）
+    poolPreparedStatements: true
+    # 配置控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+    # 状态监控
+    filter:
+      stat:
+        enabled: true
+        db-type: mysql
+        log-slow-sql: true
+        slow-sql-millis: 2000
+      # 监控过滤器
+    web-stat-filter:
+      enabled: true
+      exclusions:
+        - "*.js"
+        - "*.gif"
+        - "*.jpg"
+        - "*.png"
+        - "*.css"
+        - "*.ico"
+        - "/druid/*"
+    # 保持长连接
+    keepAlive: true
+    maxPoolPreparedStatementPerConnectionSize: 20
+    useGlobalDataSourceStat: true
+    connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  # 消息编码、国际多语言
+  messages:
+    # 配置文件位置
+    basename: il8n.login
+    encoding: UTF-8
+  # http编码
+  http:
+    encoding:
+      charset: UTF-8
+  # 文件编码
+  banner:
+    charse: UTF-8
+  # study: redis  配置redis
+  redis:
+    host: news-redis
+    port: 6379
+  # study: mail  邮件任务   密码：我的qq邮箱--设置--账户--开启POP3
+  mail:
+    username: 1456300078@qq.com
+    password: winccvcvjmrhhdda
+    host: smtp.qq.com
+    # 开启加密验证
+    properties:
+      mail:
+        smtl:
+          ssl:
+            enable: true
+
+# 文件上传根目录 设置   study: uploadImg
+rafael:
+  file:
+    basePath: D:/profile/upload-file/
+
+# pagehelper 分页使用
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+
+
+# study: mybatis  整合mybatis
+mybatis:
+  # 别名的包
+  type-aliases-package: com.stars.pojo
+  #  mapper放置
+  mapper-locations: classpath:mybatis_mapper/*.xml
+
+# 日志级别
+logging:
+  level:
+    com:
+      core: trace
+  # 日志归档
+  file:
+    path: D:\mysql-5.7.19-winx64\data\journal
+
+
+
+# 多文件配置   文件2
+---
+
+server:
+  port: 8062
+spring:
+  profiles: dev
+---
+blossom2:
+  userName: "小桃"
+  egg: 18
+  # 属性占位符
+  age: ${blossom.egg}
+  birthday: 2020/01/01
+# 数组写法
+#  hobbies:
+#    - 唱歌
+#    - 跳舞
+  # 数组行内写法
+  hobbies: [唱歌,跳舞]
+#  girlFriend:
+#    18: 小华
+#    20: 迪丽热巴
+  # 对象行内写法
+  girlFriend: {18: 小华, 20: 迪丽热巴}
+  address:
+    # 随机值
+    id: ${random.int(3)}
+    desc: 北京
+
+
+  

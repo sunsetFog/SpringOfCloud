@@ -9,6 +9,7 @@
       <module fileurl="file://$PROJECT_DIR$/eureka-client/eureka-client.iml" filepath="$PROJECT_DIR$/eureka-client/eureka-client.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka2client/eureka2client.iml" filepath="$PROJECT_DIR$/eureka2client/eureka2client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/news-system/news-system.iml" filepath="$PROJECT_DIR$/news-system/news-system.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-api/springcloud-api.iml" filepath="$PROJECT_DIR$/springcloud-api/springcloud-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/springcloud-provider/springcloud-provider.iml" filepath="$PROJECT_DIR$/springcloud-provider/springcloud-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/upload-files/upload-files.iml" filepath="$PROJECT_DIR$/upload-files/upload-files.iml" />

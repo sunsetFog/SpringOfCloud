@@ -21,6 +21,7 @@
         <module>Rabbitmq-consumer</module>
         <module>base-core</module>
         <module>upload-files</module>
+        <module>news-system</module>
     </modules>
     <!--  版本号  -->
     <properties>
@@ -49,8 +50,27 @@
         </dependency>
 
 
+        <!--	study: rabbitmq	-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-amqp</artifactId>
+            <version>2.7.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>5.15.0</version>
+        </dependency>
+        <!--study: EasyExcel导出导入-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>3.0.5</version>
+        </dependency>
 
-        <!--	Swagger	-->
+
+
+        <!--	study: Swagger	-->
         <dependency>
             <groupId>io.springfox</groupId>
             <artifactId>springfox-swagger2</artifactId>
@@ -71,24 +91,40 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
-        <!--token依赖-->
+        <!--study: token依赖-->
         <dependency>
             <groupId>com.auth0</groupId>
             <artifactId>java-jwt</artifactId>
             <version>3.4.0</version>
         </dependency>
-        <!-- Shiro整合Spring,安全验证 -->
+        <!--	++++++++++++++++授权与认证jar包+++++++++++++++ 	-->
+
+        <!--  study: security安全  装上就要配置授权，否则报错：401  Unauthorized  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <!-- study: Shiro整合Spring,安全验证 -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
             <version>1.4.1</version>
         </dependency>
-        <!--	操作Redis	-->
+
+
+
+        <!-- study: redis   操作Redis客服端，不推荐	-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>4.2.3</version>
+        </dependency>
+        <!--	study: redis     springboot集成redis，推荐	-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <!--   邮件任务	-->
+        <!--   study: mail 邮件任务	-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-mail</artifactId>
@@ -99,7 +135,8 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.76</version>
         </dependency>
-        <!--	springboot框架构建	-->
+        <!--	++++++++++++++++基础jar包+++++++++++++++ 	-->
+        <!--	springboot框架构建 web依赖 用于实现HTTP接口（包含springMVC） 内置tomcat运行服务器 必加jar包	-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -111,22 +148,51 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!-- 生产提示	-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
 
 
-        <!--lombok日志和生成实体类方法    logback日志门面-->
+        <!-- study: lombok
+			 作用：日志、实体类方法、注解
+		-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <scope>provided</scope>
         </dependency>
-        <!--	小而全的Java工具类库	-->
+        <!--     junit    统一版本   -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+        </dependency>
+        <!--   java: 程序包org.junit.jupiter.api不存在     -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
+        <!--      Log4j      -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
+        <!-- study: hutool   小而全的Java工具类库	-->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.8.1</version>
         </dependency>
-        <!--jquery-->
+        <!--	++++++++++++++++前后端不分离开发jar包+++++++++++++++ 	-->
+
+        <!--jquery 支持静态资源的  WebMvcAutoConfiguration有用到-->
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
@@ -141,11 +207,30 @@
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-java8time</artifactId>
         </dependency>
-        <!-- 生产提示	-->
+        <!--	++++++++++++++++操作数据库jar包+++++++++++++++ 	-->
+
+        <!--  study: mybatis  要先yml配置DataSource，否则报错Failed to configure a DataSource	-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.2</version>
+        </dependency>
+        <!--study: MYSQL Driver数据库驱动  要先yml配置DataSource，否则报错Failed to configure a DataSource-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <!-- study: Druid数据源  要先yml配置DataSource，否则报错Failed to configure a DataSource	-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.17</version>
+        </dependency>
+        <!--	JDBC API  要先yml配置DataSource，否则报错Failed to configure a DataSource	-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
     </dependencies>
     <!--  依赖管理：版本 -->
@@ -167,42 +252,6 @@
                 <version>2.1.4.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
-            </dependency>
-            <!--      数据库      -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>5.1.47</version>
-            </dependency>
-            <!-- Druid数据源	-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>1.1.17</version>
-            </dependency>
-            <!--     启动器       -->
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.2.2</version>
-            </dependency>
-            <!--     junit    统一版本   -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>${junit.version}</version>
-            </dependency>
-            <!--lombok日志和生成实体类方法-->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>1.18.20</version>
-            </dependency>
-            <!--      Log4j      -->
-            <dependency>
-                <groupId>log4j</groupId>
-                <artifactId>log4j</artifactId>
-                <version>1.2.17</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -238,5 +287,22 @@
 <!--            </resource>-->
 <!--        </resources>-->
 <!--    </build>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.2</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stars.mapper.shoppingMall.OmsOrderMapper">
+    <resultMap id="BaseResultMap" type="com.stars.pojo.shoppingMall.OmsOrder">
+        <id column="id" jdbcType="BIGINT" property="id" />
+        <result column="member_id" jdbcType="BIGINT" property="memberId" />
+        <result column="coupon_id" jdbcType="BIGINT" property="couponId" />
+        <result column="order_sn" jdbcType="VARCHAR" property="orderSn" />
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+        <result column="member_username" jdbcType="VARCHAR" property="memberUsername" />
+        <result column="total_amount" jdbcType="DECIMAL" property="totalAmount" />
+        <result column="pay_amount" jdbcType="DECIMAL" property="payAmount" />
+        <result column="freight_amount" jdbcType="DECIMAL" property="freightAmount" />
+        <result column="promotion_amount" jdbcType="DECIMAL" property="promotionAmount" />
+        <result column="integration_amount" jdbcType="DECIMAL" property="integrationAmount" />
+        <result column="coupon_amount" jdbcType="DECIMAL" property="couponAmount" />
+        <result column="discount_amount" jdbcType="DECIMAL" property="discountAmount" />
+        <result column="pay_type" jdbcType="INTEGER" property="payType" />
+        <result column="source_type" jdbcType="INTEGER" property="sourceType" />
+        <result column="status" jdbcType="INTEGER" property="status" />
+        <result column="order_type" jdbcType="INTEGER" property="orderType" />
+        <result column="delivery_company" jdbcType="VARCHAR" property="deliveryCompany" />
+        <result column="delivery_sn" jdbcType="VARCHAR" property="deliverySn" />
+        <result column="auto_confirm_day" jdbcType="INTEGER" property="autoConfirmDay" />
+        <result column="integration" jdbcType="INTEGER" property="integration" />
+        <result column="growth" jdbcType="INTEGER" property="growth" />
+        <result column="promotion_info" jdbcType="VARCHAR" property="promotionInfo" />
+        <result column="bill_type" jdbcType="INTEGER" property="billType" />
+        <result column="bill_header" jdbcType="VARCHAR" property="billHeader" />
+        <result column="bill_content" jdbcType="VARCHAR" property="billContent" />
+        <result column="bill_receiver_phone" jdbcType="VARCHAR" property="billReceiverPhone" />
+        <result column="bill_receiver_email" jdbcType="VARCHAR" property="billReceiverEmail" />
+        <result column="receiver_name" jdbcType="VARCHAR" property="receiverName" />
+        <result column="receiver_phone" jdbcType="VARCHAR" property="receiverPhone" />
+        <result column="receiver_post_code" jdbcType="VARCHAR" property="receiverPostCode" />
+        <result column="receiver_province" jdbcType="VARCHAR" property="receiverProvince" />
+        <result column="receiver_city" jdbcType="VARCHAR" property="receiverCity" />
+        <result column="receiver_region" jdbcType="VARCHAR" property="receiverRegion" />
+        <result column="receiver_detail_address" jdbcType="VARCHAR" property="receiverDetailAddress" />
+        <result column="note" jdbcType="VARCHAR" property="note" />
+        <result column="confirm_status" jdbcType="INTEGER" property="confirmStatus" />
+        <result column="delete_status" jdbcType="INTEGER" property="deleteStatus" />
+        <result column="use_integration" jdbcType="INTEGER" property="useIntegration" />
+        <result column="payment_time" jdbcType="TIMESTAMP" property="paymentTime" />
+        <result column="delivery_time" jdbcType="TIMESTAMP" property="deliveryTime" />
+        <result column="receive_time" jdbcType="TIMESTAMP" property="receiveTime" />
+        <result column="comment_time" jdbcType="TIMESTAMP" property="commentTime" />
+        <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime" />
+    </resultMap>
+    <select id="selectWay" resultMap="BaseResultMap" parameterType="com.stars.apiParams.OmsOrderListParam">
+        SELECT *
+        FROM
+        oms_order
+        WHERE
+        delete_status = 0
+        <if test="orderSn!=null and orderSn!=''">
+            AND order_sn = #{orderSn}
+        </if>
+        <if test="status!=null">
+            AND `status` = #{status}
+        </if>
+        <if test="sourceType!=null">
+            AND source_type = #{sourceType}
+        </if>
+        <if test="orderType!=null">
+            AND order_type = #{orderType}
+        </if>
+        <if test="createTime!=null and createTime!=''">
+            AND create_time LIKE concat(#{createTime},"%")
+        </if>
+        <if test="receiverKeyword!=null and receiverKeyword!=''">
+            AND (
+            receiver_name LIKE concat("%",#{receiverKeyword},"%")
+            OR receiver_phone LIKE concat("%",#{receiverKeyword},"%")
+            )
+        </if>
+    </select>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <resultMap id="orderDetailResultMap" type="com.stars.pojo.shoppingMall.OmsOrderDetail" extends="BaseResultMap">
+        <collection property="orderItemList" resultMap="com.stars.mapper.shoppingMall.OmsOrderItemMapper.BaseResultMap" columnPrefix="item_"/>
+        <collection property="historyList" resultMap="com.stars.mapper.shoppingMall.OmsOrderOperateHistoryMapper.BaseResultMap" columnPrefix="history_"/>
+    </resultMap>
+
+    <select id="selectDetail" resultMap="orderDetailResultMap" parameterType="Long">
+        SELECT o.*,
+               oi.id item_id,
+               oi.product_id item_product_id,
+               oi.product_sn item_product_sn,
+               oi.product_pic item_product_pic,
+               oi.product_name item_product_name,
+               oi.product_brand item_product_brand,
+               oi.product_price item_product_price,
+               oi.product_quantity item_product_quantity,
+               oi.product_attr item_product_attr,
+               oh.id history_id,
+               oh.operate_man history_operate_man,
+               oh.create_time history_create_time,
+               oh.order_status history_order_status,
+               oh.note history_note
+        FROM
+            oms_order o
+                LEFT JOIN oms_order_item oi ON o.id = oi.order_id
+                LEFT JOIN oms_order_operate_history oh ON o.id = oh.order_id
+        WHERE
+            o.id = #{id}
+        ORDER BY oi.id ASC,oh.create_time DESC
+    </select>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="update_deleteStatus" parameterType="Map">
+        update oms_order
+        <set>
+            <if test="deleteStatus != null">
+                delete_status = #{deleteStatus,jdbcType=BIGINT},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="updateDelivery">
+        UPDATE oms_order
+        SET
+        delivery_sn = CASE id
+        <foreach collection="list" item="item">
+            WHEN #{item.orderId} THEN #{item.deliverySn}
+        </foreach>
+        END,
+        delivery_company = CASE id
+        <foreach collection="list" item="item">
+            WHEN #{item.orderId} THEN #{item.deliveryCompany}
+        </foreach>
+        END,
+        delivery_time = CASE id
+        <foreach collection="list" item="item">
+            WHEN #{item.orderId} THEN now()
+        </foreach>
+        END,
+        `status` = CASE id
+        <foreach collection="list" item="item">
+            WHEN #{item.orderId} THEN 2
+        </foreach>
+        END
+        WHERE
+        id IN
+        <foreach collection="list" item="item" separator="," open="(" close=")">
+            #{item.orderId}
+        </foreach>
+        AND `status` = 1
+    </update>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <update id="updateWay" parameterType="com.stars.pojo.shoppingMall.OmsOrder">
+        update oms_order
+        <set>
+            <if test="memberId != null">
+                member_id = #{memberId,jdbcType=BIGINT},
+            </if>
+            <if test="couponId != null">
+                coupon_id = #{couponId,jdbcType=BIGINT},
+            </if>
+            <if test="orderSn != null">
+                order_sn = #{orderSn,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="memberUsername != null">
+                member_username = #{memberUsername,jdbcType=VARCHAR},
+            </if>
+            <if test="totalAmount != null">
+                total_amount = #{totalAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="payAmount != null">
+                pay_amount = #{payAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="freightAmount != null">
+                freight_amount = #{freightAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="promotionAmount != null">
+                promotion_amount = #{promotionAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="integrationAmount != null">
+                integration_amount = #{integrationAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="couponAmount != null">
+                coupon_amount = #{couponAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="discountAmount != null">
+                discount_amount = #{discountAmount,jdbcType=DECIMAL},
+            </if>
+            <if test="payType != null">
+                pay_type = #{payType,jdbcType=INTEGER},
+            </if>
+            <if test="sourceType != null">
+                source_type = #{sourceType,jdbcType=INTEGER},
+            </if>
+            <if test="status != null">
+                status = #{status,jdbcType=INTEGER},
+            </if>
+            <if test="orderType != null">
+                order_type = #{orderType,jdbcType=INTEGER},
+            </if>
+            <if test="deliveryCompany != null">
+                delivery_company = #{deliveryCompany,jdbcType=VARCHAR},
+            </if>
+            <if test="deliverySn != null">
+                delivery_sn = #{deliverySn,jdbcType=VARCHAR},
+            </if>
+            <if test="autoConfirmDay != null">
+                auto_confirm_day = #{autoConfirmDay,jdbcType=INTEGER},
+            </if>
+            <if test="integration != null">
+                integration = #{integration,jdbcType=INTEGER},
+            </if>
+            <if test="growth != null">
+                growth = #{growth,jdbcType=INTEGER},
+            </if>
+            <if test="promotionInfo != null">
+                promotion_info = #{promotionInfo,jdbcType=VARCHAR},
+            </if>
+            <if test="billType != null">
+                bill_type = #{billType,jdbcType=INTEGER},
+            </if>
+            <if test="billHeader != null">
+                bill_header = #{billHeader,jdbcType=VARCHAR},
+            </if>
+            <if test="billContent != null">
+                bill_content = #{billContent,jdbcType=VARCHAR},
+            </if>
+            <if test="billReceiverPhone != null">
+                bill_receiver_phone = #{billReceiverPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="billReceiverEmail != null">
+                bill_receiver_email = #{billReceiverEmail,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverName != null">
+                receiver_name = #{receiverName,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverPhone != null">
+                receiver_phone = #{receiverPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverPostCode != null">
+                receiver_post_code = #{receiverPostCode,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverProvince != null">
+                receiver_province = #{receiverProvince,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverCity != null">
+                receiver_city = #{receiverCity,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverRegion != null">
+                receiver_region = #{receiverRegion,jdbcType=VARCHAR},
+            </if>
+            <if test="receiverDetailAddress != null">
+                receiver_detail_address = #{receiverDetailAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="note != null">
+                note = #{note,jdbcType=VARCHAR},
+            </if>
+            <if test="confirmStatus != null">
+                confirm_status = #{confirmStatus,jdbcType=INTEGER},
+            </if>
+            <if test="deleteStatus != null">
+                delete_status = #{deleteStatus,jdbcType=INTEGER},
+            </if>
+            <if test="useIntegration != null">
+                use_integration = #{useIntegration,jdbcType=INTEGER},
+            </if>
+            <if test="paymentTime != null">
+                payment_time = #{paymentTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deliveryTime != null">
+                delivery_time = #{deliveryTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="receiveTime != null">
+                receive_time = #{receiveTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="commentTime != null">
+                comment_time = #{commentTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="modifyTime != null">
+                modify_time = #{modifyTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+
+</mapper>

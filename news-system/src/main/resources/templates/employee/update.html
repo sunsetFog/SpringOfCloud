@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+th:value回显
+th:action绑定接口
+-->
+<form th:action="@{/season/update}" method="post">
+<!--    修改需要隐藏id  -->
+    <input type="hidden" name="id" th:value="${tiao.getId()}">
+    <div class="form-group">
+        <label>姓名：</label>
+        <input type="text" name="lastName" placeholder="请输入姓名" th:value="${tiao.getLastName()}">
+    </div>
+    <div class="form-group">
+        <label>邮箱：</label>
+        <input type="email" name="email" placeholder="请输入邮箱" th:value="${tiao.getEmail()}">
+    </div>
+    <div class="form-group">
+        <label>性别：</label>
+        <p>
+            <input type="radio" name="gender" value="1" th:checked="${tiao.getGender()==1}">
+            <label>男</label>
+        </p>
+        <p>
+<!--     th:checked回显勾选       -->
+            <input type="radio" name="gender" value="0" th:checked="${tiao.getGender()==0}">
+            <label>女</label>
+        </p>
+    </div>
+    <div class="form-group">
+        <label>部门：</label>
+        <select name="departmentPojo01.id">
+<!--     th:selected回显选中       -->
+            <option th:each="item:${departmentList}" th:text="${item.getDepartmentName()}" th:value="${item.getId()}" th:selected="${item.getId()==tiao.getDepartmentPojo01().getId()}"></option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>生日：</label>
+<!--   #dates.format格式化回显     -->
+        <input type="text" name="birth" placeholder="请输入生日" th:value="${#dates.format(tiao.getBirth(), 'yyyy-MM-dd')}">
+    </div>
+<!--  type="submit"自动绑定事件  -->
+    <button type="submit">确定</button>
+</form>
+</body>
+</html>

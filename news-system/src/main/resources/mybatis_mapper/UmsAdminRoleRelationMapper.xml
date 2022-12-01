@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stars.mapper.shoppingMall.UmsAdminRoleRelationMapper">
+    <delete id="deleteWay" parameterType="java.lang.Long">
+        delete from ums_admin_role_relation where admin_id = #{admin_id,jdbcType=INTEGER}
+    </delete>
+    <!--批量新增回写主键支持-->
+    <insert id="insertList">
+        INSERT INTO ums_admin_role_relation (admin_id, role_id) VALUES
+        <foreach collection="list" separator="," item="item" index="index">
+            (#{item.adminId,jdbcType=BIGINT},
+            #{item.roleId,jdbcType=BIGINT})
+        </foreach>
+    </insert>
+
+
+    <select id="selectWay" resultMap="com.stars.mapper.shoppingMall.UmsRoleMapper.BaseResultMap">
+        select r.*
+        from ums_admin_role_relation ar
+            left join ums_role r on ar.role_id = r.id
+        where ar.admin_id = #{adminId}
+    </select>
+</mapper>
