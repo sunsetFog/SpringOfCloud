@@ -16,6 +16,7 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+
     <dependencies>
         <!-- pagehelper分页用  要先yml配置DataSource，否则报错Failed to configure a DataSource -->
         <dependency>
@@ -28,23 +29,44 @@
 <!--
 打包文件运行失败
 报错：no main manifest attribute, in /app.jar   没有主清单属性
+原因：打包时，未将所有依赖包都打入包中导致。
 https://blog.csdn.net/hanjun0612/article/details/118704220
 
+报错：Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.6.6:repackage (repackage) on project springcloud-api: Execution repackage of goal org.springframework.boot:spring-boot-maven-plugin:2.6.6:repackage failed: Unable to find main class
+报错：Error injecting: org.springframework.boot.maven.RepackageMojo java.lang.TypeNotPresentException: Type org.springframework.boot.maven.RepackageMojo not present
+加上版本号
+
+文件》项目结构》项目和SDK  设置SDK
+文件》设置》编辑器》文件编码
   -->
+    <packaging>jar</packaging>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>2.6.6</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
-                    <skipTests>true</skipTests>
+                    <includeSystemScope>true</includeSystemScope>
+                    <mainClass>com.stars.StarsApplication</mainClass>
                 </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-surefire-plugin</artifactId>-->
+<!--                <version>2.22.2</version>-->
+<!--                <configuration>-->
+<!--                    <skipTests>true</skipTests>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 

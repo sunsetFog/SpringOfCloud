@@ -18,6 +18,10 @@
 
     <!--  当前Module自己需要的依赖，父依赖有就不用写了  -->
     <dependencies>
+        <dependency>
+            <groupId>com.core</groupId>
+            <artifactId>springcloud-api</artifactId>
+        </dependency>
         <!--  security安全  装上就要配置授权，否则报错：401  Unauthorized -->
         <!--        <dependency>-->
         <!--            <groupId>org.springframework.boot</groupId>-->
