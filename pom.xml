@@ -21,14 +21,11 @@
         就自动生成这里了
      -->
     <modules>
-        <module>springcloud-api</module>
-        <module>springcloud-provider</module>
         <module>eureka-server</module>
         <module>eureka-client</module>
         <module>eureka2client</module>
         <module>MyBatisPlus</module>
         <module>Rabbitmq-consumer</module>
-        <module>base-core</module>
         <module>upload-files</module>
         <module>news-system</module>
     </modules>
@@ -262,11 +259,11 @@
     <dependencyManagement>
         <dependencies>
             <!--把别的工程变jar包，然后引入-->
-            <dependency>
-                <groupId>com.core</groupId>
-                <artifactId>springcloud-api</artifactId>
-                <version>${apple.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.core</groupId>-->
+<!--                <artifactId>springcloud-api</artifactId>-->
+<!--                <version>${apple.version}</version>-->
+<!--            </dependency>-->
             <!--      SpringBoot      -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
