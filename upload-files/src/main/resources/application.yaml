@@ -16,7 +16,7 @@ spring:
     # serverTimezone时区 中国    useSSL=false不使用安全连接    characterEncoding字符集编码
     url: jdbc:mysql://localhost:3306/jeecg-boot?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     # 驱动   mysql8: com.mysql.cj.jdbc.Driver      mysql5: com.mysql.jdbc.Driver
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
 
 jeecg:
   #阿里云oss存储和大鱼短信秘钥配置   未知填??

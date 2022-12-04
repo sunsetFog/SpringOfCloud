@@ -16,6 +16,7 @@ import java.io.BufferedInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
@@ -96,7 +97,6 @@ public class OssBootUtil {
         FileTypeFilter.fileTypeFilter(file);
         //update-end-author:liusq date:20210809 for: 过滤上传文件类型
 
-        String filePath = null;
         initOss(endPoint, accessKeyId, accessKeySecret);
         StringBuilder fileUrl = new StringBuilder();
         String newBucket = bucketName;
@@ -108,28 +108,24 @@ public class OssBootUtil {
             if(!ossClient.doesBucketExist(newBucket)){
                 ossClient.createBucket(newBucket);
             }
-            // 获取文件名
+            // 获取文件名后缀   **.jpg
             String orgName = file.getOriginalFilename();
-            if("" == orgName){
-                orgName=file.getName();
-            }
-            orgName = CommonUtils.getFileName(orgName);
-            String fileName = orgName.indexOf(".")==-1
-                    ?orgName + "_" + System.currentTimeMillis()
-                    :orgName.substring(0, orgName.lastIndexOf(".")) + "_" + System.currentTimeMillis() + orgName.substring(orgName.lastIndexOf("."));
+            // 后缀 .jpg  / .png等
+            String suffix = orgName.substring(orgName.lastIndexOf("."));
+            // 文件名
+            String fileName = new SimpleDateFormat("yyyyMMddHHmmss").format(new Date());
+
+
+            // 目录后面没有/，就加上
             if (!fileDir.endsWith("/")) {
                 fileDir = fileDir.concat("/");
             }
             //update-begin-author:wangshuai date:20201012 for: 过滤上传文件夹名特殊字符，防止攻击
             fileDir=StrAttackFilter.filter(fileDir);
             //update-end-author:wangshuai date:20201012 for: 过滤上传文件夹名特殊字符，防止攻击
-            fileUrl = fileUrl.append(fileDir + fileName);
+            fileUrl = fileUrl.append(fileDir + fileName + suffix);
 
-            if (oConvertUtils.isNotEmpty(staticDomain) && staticDomain.toLowerCase().startsWith("http")) {
-                filePath = staticDomain + "/" + fileUrl;
-            } else {
-                filePath = "https://" + newBucket + "." + endPoint + "/" + fileUrl;
-            }
+
             PutObjectResult result = ossClient.putObject(newBucket, fileUrl.toString(), file.getInputStream());
             // 设置权限(公开读)
 //            ossClient.setBucketAcl(newBucket, CannedAccessControlList.PublicRead);
@@ -143,7 +139,7 @@ public class OssBootUtil {
             e.printStackTrace();
             return null;
         }
-        return filePath;
+        return "https://" + newBucket + "." + endPoint + "/" + fileUrl;
     }
 
     /**

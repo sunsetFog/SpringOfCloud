@@ -103,20 +103,7 @@
             <artifactId>java-jwt</artifactId>
             <version>3.4.0</version>
         </dependency>
-        <!--	++++++++++++++++授权与认证jar包+++++++++++++++ 	-->
 
-        <!--  study: security安全  装上就要配置授权，否则报错：401  Unauthorized  -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-security</artifactId>
-            <version>2.7.6</version>
-        </dependency>
-        <!-- study: Shiro整合Spring,安全验证 -->
-        <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring</artifactId>
-            <version>1.4.1</version>
-        </dependency>
 
 
 
