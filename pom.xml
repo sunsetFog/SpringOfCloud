@@ -209,12 +209,6 @@
         </dependency>
         <!--	++++++++++++++++操作数据库jar包+++++++++++++++ 	-->
 
-        <!--  study: mybatis  要先yml配置DataSource，否则报错Failed to configure a DataSource	-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.2.2</version>
-        </dependency>
         <!--study: MYSQL Driver数据库驱动  要先yml配置DataSource，否则报错Failed to configure a DataSource-->
         <dependency>
             <groupId>mysql</groupId>
