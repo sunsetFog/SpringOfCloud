@@ -1,7 +1,10 @@
 package com.stars;
 
+import org.redisson.Redisson;
+import org.redisson.config.Config;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
@@ -23,6 +26,14 @@ public class StarsApplication {
 	// springboot应用启动
 	public static void main(String[] args) {
 		SpringApplication.run(StarsApplication.class, args);
+	}
+	// study: 高并发分布式锁    redisson客户端连接
+	@Bean
+	public Redisson redisson() {
+		Config config = new Config();
+		// 单机模式
+		config.useSingleServer().setAddress("redis://127.0.0.1:6379").setDatabase(0);
+		return (Redisson) Redisson.create(config);
 	}
 
 }
