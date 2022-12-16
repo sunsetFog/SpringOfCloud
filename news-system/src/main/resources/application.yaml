@@ -128,6 +128,8 @@ spring:
 rafael:
   file:
     basePath: D:/profile/upload-file/
+  # 在线预览文件服务器地址配置   study: 文档预览
+  file-view-domain: 127.0.0.1:8012
 
 # pagehelper 分页使用
 pagehelper:
