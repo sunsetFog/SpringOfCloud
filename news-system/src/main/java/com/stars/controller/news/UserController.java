@@ -37,6 +37,13 @@ public class UserController {
     private RedisUtilsService redisUtilsService;
     @Autowired
     private BaseCommonService baseCommonService;
+
+    /**
+     * study: 自定义注解
+     * @param req
+     * @param session
+     * @return
+     */
     @AutoLog(value = "登录成功666")
     @ResponseBody
     @PostMapping("/user/login")

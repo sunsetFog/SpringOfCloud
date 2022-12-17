@@ -97,24 +97,17 @@ public class AutoLogAspect {
     // -------------------------------------
 
     private void saveSysLog(ProceedingJoinPoint joinPoint, long time, Object obj) {
-        System.out.println("result=1="+obj);
+//        System.out.println("result=1="+obj);
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
-        // 日志实体类---主要是填充值
-        LogDTO dto = new LogDTO();
         // 注解实体类
         AutoLog syslog = method.getAnnotation(AutoLog.class);
-        if(syslog != null){
-            // 操作日志内容
-            String content = syslog.value();
-            // 模块判断
-//            if(syslog.module()== ModuleType.ONLINE){
-                content = getOnlineLogContent(obj, content);
-//            }
-            //注解上的描述
-            dto.setLogType(syslog.logType());
-            dto.setLogContent(content);
-        }
+
+        // 日志实体类---主要是填充值
+        LogDTO dto = new LogDTO();
+
+        dto.setLogType(syslog.logType());
+        dto.setLogContent(syslog.value());
 
         //请求的方法名
         String className = joinPoint.getTarget().getClass().getName();
@@ -228,6 +221,7 @@ public class AutoLogAspect {
             ResponseData res = (ResponseData)obj;
             String msg = res.getMessage();
 //            String tableName = res.getOnlTable();
+//            System.out.println("表名==="+tableName);
 //            if(oConvertUtils.isNotEmpty(tableName)){
 //                content+=",表名:"+tableName;
 //            }

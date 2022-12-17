@@ -34,7 +34,7 @@ import java.lang.annotation.*;
 public @interface AutoLog {
 
     /**
-     * 日志内容
+     * 自定义注解日志内容
      *
      * @return
      */
