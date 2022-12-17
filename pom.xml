@@ -228,6 +228,12 @@
             <artifactId>spring-boot-starter-jdbc</artifactId>
             <version>2.7.6</version>
         </dependency>
+        <!--    study: 自定义注解  提供切面类注解   -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+            <version>2.7.6</version>
+        </dependency>
     </dependencies>
     <!--  依赖管理：版本
         dependencyManagement只是声明依赖，并不会自动引入。解决子项目使用不同版本的maven

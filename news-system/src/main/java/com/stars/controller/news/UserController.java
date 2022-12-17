@@ -1,11 +1,14 @@
 package com.stars.controller.news;
 
+import com.stars.aspect.annotation.AutoLog;
 import com.stars.common.redis.JWTUtils;
 import com.stars.common.redis.RedisKeySplicing;
 import com.stars.mapper.news.UserMapper;
 import com.stars.common.util.ResponseData;
 import com.stars.common.util.ResponseDataUtil;
+import com.stars.mapper.shoppingMall.BaseCommonMapper;
 import com.stars.pojo.news.LoginParams;
+import com.stars.service.BaseCommonService;
 import com.stars.service.RedisUtilsService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -32,6 +35,9 @@ public class UserController {
     private UserMapper userMapper;
     @Resource
     private RedisUtilsService redisUtilsService;
+    @Autowired
+    private BaseCommonService baseCommonService;
+    @AutoLog(value = "登录成功666")
     @ResponseBody
     @PostMapping("/user/login")
     public ResponseData userLogin(HttpServletRequest req, HttpSession session) {
@@ -114,6 +120,7 @@ public class UserController {
 //            code = "0";
 //            msg = "用户名或密码错误";
 //        }
+//        baseCommonService.addLog("用户名: " + username + ",登录成功！", 1, null);
         return ResponseDataUtil.buildSuccess(code, msg, Sites);
     }
 }
