@@ -173,4 +173,10 @@
         delete from ums_admin
         where id = #{id,jdbcType=BIGINT}
     </delete>
+
+    <!--  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  -->
+
+    <select id="loginVerify" resultType="com.stars.pojo.news.LoginParams" parameterType="Map">
+        SELECT * FROM ums_admin where username = #{username, jdbcType=VARCHAR} and password = #{password, jdbcType=VARCHAR};
+    </select>
 </mapper>

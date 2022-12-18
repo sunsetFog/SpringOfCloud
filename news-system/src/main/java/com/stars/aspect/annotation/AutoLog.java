@@ -4,7 +4,7 @@ import java.lang.annotation.*;
 
 /**
  * study: 自定义注解
- * 日志记录注解实体类
+ * 日志记录注解实体类    《注解属性》
  */
 /*
     用在哪里

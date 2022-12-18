@@ -1,6 +1,6 @@
 package com.stars.config.Shiro;
 
-import com.stars.mapper.news.UserMapper;
+import com.stars.mapper.shoppingMall.UmsAdminMapper;
 import com.stars.mapper.shoppingMall.UmsMenuMapper;
 import com.stars.mapper.shoppingMall.UmsRoleMapper;
 import com.stars.pojo.news.LoginParams;
@@ -26,7 +26,7 @@ public class UserRealm extends AuthorizingRealm {
     @Autowired
     private UmsMenuMapper umsMenuMapper;
     @Autowired
-    private UserMapper userMapper;
+    private UmsAdminMapper umsAdminMapper;
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals){
@@ -69,7 +69,7 @@ public class UserRealm extends AuthorizingRealm {
         String password = String.valueOf(userToken.getPassword());
         System.out.println("--username--"+username);
         System.out.println("--password--"+password);
-        LoginParams loginParams = userMapper.loginVerify(username, password);
+        LoginParams loginParams = umsAdminMapper.loginVerify(username, password);
         System.out.println("--res-006-"+ loginParams);
 
 

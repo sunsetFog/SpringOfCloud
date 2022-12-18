@@ -1,9 +1,8 @@
-package com.stars.controller.news;
+package com.stars.controller.shoppingMall;
 
 import com.stars.aspect.annotation.AutoLog;
 import com.stars.common.redis.JWTUtils;
 import com.stars.common.redis.RedisKeySplicing;
-import com.stars.mapper.news.UserMapper;
 import com.stars.common.util.ResponseData;
 import com.stars.common.util.ResponseDataUtil;
 import com.stars.mapper.shoppingMall.BaseCommonMapper;
@@ -30,9 +29,7 @@ import java.util.UUID;
 */
 @RestController
 @CrossOrigin
-public class UserController {
-    @Autowired
-    private UserMapper userMapper;
+public class LoginController {
     @Resource
     private RedisUtilsService redisUtilsService;
     @Autowired
@@ -44,7 +41,7 @@ public class UserController {
      * @param session
      * @return
      */
-    @AutoLog(value = "登录成功666")
+    @AutoLog(value = "登录成功666", logType = 1, operateType = 0)
     @ResponseBody
     @PostMapping("/user/login")
     public ResponseData userLogin(HttpServletRequest req, HttpSession session) {
