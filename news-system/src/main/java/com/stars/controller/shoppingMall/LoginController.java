@@ -1,9 +1,9 @@
 package com.stars.controller.shoppingMall;
 
 import com.stars.aspect.annotation.AutoLog;
-import com.stars.common.redis.JwtTokenUtils;
-import com.stars.common.util.ResponseData;
-import com.stars.common.util.ResponseDataUtil;
+import com.stars.common.util.JwtTokenUtils;
+import com.stars.common.fruit.ResponseData;
+import com.stars.common.fruit.ResponseDataUtil;
 import com.stars.common.util.oConvertUtils;
 import com.stars.mapper.shoppingMall.UmsAdminMapper;
 import com.stars.pojo.news.LoginParams;
@@ -19,7 +19,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;

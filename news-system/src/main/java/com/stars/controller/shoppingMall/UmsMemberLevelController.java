@@ -1,7 +1,7 @@
 package com.stars.controller.shoppingMall;
 
-import com.stars.common.util.ResponseData;
-import com.stars.common.util.ResponseDataUtil;
+import com.stars.common.fruit.ResponseData;
+import com.stars.common.fruit.ResponseDataUtil;
 import com.stars.mapper.shoppingMall.UmsMemberLevelMapper;
 import com.stars.pojo.shoppingMall.UmsMemberLevel;
 import io.swagger.annotations.Api;

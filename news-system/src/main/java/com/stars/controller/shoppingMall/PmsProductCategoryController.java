@@ -1,9 +1,9 @@
 package com.stars.controller.shoppingMall;
 
 import com.stars.apiParams.PmsProductCategoryAddParam;
-import com.stars.common.util.PageResult;
-import com.stars.common.util.ResponseData;
-import com.stars.common.util.ResponseDataUtil;
+import com.stars.common.fruit.PageResult;
+import com.stars.common.fruit.ResponseData;
+import com.stars.common.fruit.ResponseDataUtil;
 import com.stars.mapper.shoppingMall.PmsProductCategoryAttributeRelationMapper;
 import com.stars.mapper.shoppingMall.PmsProductCategoryMapper;
 import com.stars.pojo.shoppingMall.*;

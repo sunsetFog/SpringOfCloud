@@ -1,7 +1,7 @@
 package com.stars.config;
 
 import com.stars.common.util.JsonUtils;
-import com.stars.common.util.ResponseData;
+import com.stars.common.fruit.ResponseData;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;

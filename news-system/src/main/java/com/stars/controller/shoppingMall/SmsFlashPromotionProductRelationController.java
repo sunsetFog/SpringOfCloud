@@ -1,8 +1,8 @@
 package com.stars.controller.shoppingMall;
 
-import com.stars.common.util.PageResult;
-import com.stars.common.util.ResponseData;
-import com.stars.common.util.ResponseDataUtil;
+import com.stars.common.fruit.PageResult;
+import com.stars.common.fruit.ResponseData;
+import com.stars.common.fruit.ResponseDataUtil;
 import com.stars.mapper.shoppingMall.SmsFlashPromotionProductRelationMapper;
 import com.stars.pojo.shoppingMall.SmsFlashPromotionProduct;
 import com.stars.pojo.shoppingMall.SmsFlashPromotionProductRelation;

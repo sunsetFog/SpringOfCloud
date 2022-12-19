@@ -2,9 +2,9 @@ package com.stars.controller.shoppingMall;
 
 import com.stars.apiParams.OmsOrderReturnApplyListParam;
 import com.stars.apiParams.OmsOrderReturnApplyStatusParam;
-import com.stars.common.util.PageResult;
-import com.stars.common.util.ResponseData;
-import com.stars.common.util.ResponseDataUtil;
+import com.stars.common.fruit.PageResult;
+import com.stars.common.fruit.ResponseData;
+import com.stars.common.fruit.ResponseDataUtil;
 import com.stars.mapper.shoppingMall.OmsOrderReturnApplyMapper;
 import com.stars.pojo.shoppingMall.OmsOrderReturnApply;
 import com.stars.pojo.shoppingMall.OmsOrderReturnApplyResult;

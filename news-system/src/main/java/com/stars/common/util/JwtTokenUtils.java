@@ -1,4 +1,4 @@
-package com.stars.common.redis;
+package com.stars.common.util;
 
 
 import com.auth0.jwt.JWT;

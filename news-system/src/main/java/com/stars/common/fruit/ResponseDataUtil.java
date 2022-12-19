@@ -1,4 +1,4 @@
-package com.stars.common.util;
+package com.stars.common.fruit;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;

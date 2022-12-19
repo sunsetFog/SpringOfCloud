@@ -1,9 +1,9 @@
 package com.stars.controller.shoppingMall;
 
 import com.stars.apiParams.UmsAdminAddParam;
-import com.stars.common.util.PageResult;
-import com.stars.common.util.ResponseData;
-import com.stars.common.util.ResponseDataUtil;
+import com.stars.common.fruit.PageResult;
+import com.stars.common.fruit.ResponseData;
+import com.stars.common.fruit.ResponseDataUtil;
 import com.stars.mapper.shoppingMall.UmsAdminMapper;
 import com.stars.pojo.shoppingMall.UmsAdmin;
 import com.github.pagehelper.PageHelper;
