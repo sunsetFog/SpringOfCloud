@@ -1,6 +1,5 @@
 package com.stars.config;
 
-import com.stars.service.RedisUtilsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -25,9 +24,6 @@ public class SpringMvcConfig implements WebMvcConfigurer {
     public LocaleResolver localeResolver() {
         return new Lang8n();
     }
-    // 写入redis
-    @Autowired
-    private RedisUtilsService redisUtilsService;
     // 注册http拦截器
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
@@ -35,7 +31,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
             addPathPatterns拦截
             excludePathPatterns不拦截
         */
-        registry.addInterceptor(new HttpInterceptor(redisUtilsService)) // 实例化http拦截器，顺便带参构造
+        registry.addInterceptor(new HttpInterceptor()) // 实例化http拦截器，顺便带参构造
                 .addPathPatterns("/**")// 拦截所有
                 .excludePathPatterns("/","index.html","/user/login", "/shop/list","/css/**","/js/**","/img/**");
     }

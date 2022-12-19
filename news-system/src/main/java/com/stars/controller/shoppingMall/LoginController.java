@@ -1,14 +1,14 @@
 package com.stars.controller.shoppingMall;
 
 import com.stars.aspect.annotation.AutoLog;
-import com.stars.common.redis.JWTUtils;
-import com.stars.common.redis.RedisKeySplicing;
+import com.stars.common.redis.JwtTokenUtils;
 import com.stars.common.util.ResponseData;
 import com.stars.common.util.ResponseDataUtil;
-import com.stars.mapper.shoppingMall.BaseCommonMapper;
+import com.stars.common.util.oConvertUtils;
+import com.stars.mapper.shoppingMall.UmsAdminMapper;
 import com.stars.pojo.news.LoginParams;
+import com.stars.pojo.shoppingMall.UmsAdmin;
 import com.stars.service.BaseCommonService;
-import com.stars.service.RedisUtilsService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -16,13 +16,16 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authz.AuthorizationException;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 
 /*
 自定义的UserRealm
@@ -30,10 +33,12 @@ import java.util.UUID;
 @RestController
 @CrossOrigin
 public class LoginController {
-    @Resource
-    private RedisUtilsService redisUtilsService;
     @Autowired
     private BaseCommonService baseCommonService;
+    @Autowired
+    private UmsAdminMapper umsAdminMapper;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     /**
      * study: 自定义注解
@@ -89,9 +94,9 @@ public class LoginController {
 
         String isToken = null;
         try {
-            isToken = JWTUtils.generTokenByRS256(currentLoginParams);
+            isToken = JwtTokenUtils.generTokenByRS256(currentLoginParams);
 
-            LoginParams beLoginParams = JWTUtils.verifierTokenBySysUser(isToken);
+            LoginParams beLoginParams = JwtTokenUtils.verifierTokenBySysUser(isToken);
             System.out.println("--token校验--"+ beLoginParams);
         } catch (Exception e) {
             e.printStackTrace();
@@ -107,24 +112,38 @@ public class LoginController {
 
 
         // redis存储token
-        String appleKey = RedisKeySplicing.getUserToken(currentLoginParams.getUsername());
-        System.out.println("--appleKey--"+appleKey);
-        redisUtilsService.cacheStringInfoByDay(appleKey, isToken, 1);
-        redisUtilsService.cacheStringInfoByDay("username", username, 1);
-        String cacheStringInfo = redisUtilsService.getCacheStringInfo(appleKey);
-        System.out.println("--redis存储token的值--"+cacheStringInfo);
+        redisTemplate.opsForValue().set("access_token:", isToken, 1, TimeUnit.DAYS);
 
-
-//        int res = userMapper.loginVerify(username, password);
-//        System.out.println("--res--"+res);
-//        if(res == 1) {
-//            code = "200";
-//            msg = "登录成功";
-//        } else if(res == 0) {
-//            code = "0";
-//            msg = "用户名或密码错误";
-//        }
 //        baseCommonService.addLog("用户名: " + username + ",登录成功！", 1, null);
         return ResponseDataUtil.buildSuccess(code, msg, Sites);
+    }
+    /**
+     * 退出登录
+     * @param request
+     * @param response
+     * @return
+     */
+    @RequestMapping(value = "/user/logout")
+    public ResponseData logout(HttpServletRequest request, HttpServletResponse response) {
+        // 获取header里的token
+        String token = request.getHeader("token");
+        // 没有token退出登录失败
+        if(oConvertUtils.isEmpty(token)) {
+            return ResponseDataUtil.buildError("退出登录失败！");
+        }
+        // 根据token获取Jwt存的对象
+        LoginParams loginParams = JwtTokenUtils.accessObj(token);
+        // 根据用户名查寻一条用户数据
+        UmsAdmin umsAdmin = umsAdminMapper.selectRow(loginParams.getUsername());
+        if(umsAdmin == null) {
+            return ResponseDataUtil.buildError("Token无效!");
+        }
+        // 添加日志记录
+        //清空用户登录Token缓存
+        redisTemplate.delete("access_token");
+        //调用shiro的logout
+        SecurityUtils.getSubject().logout();
+
+        return ResponseDataUtil.buildSuccess("退出登录成功！");
     }
 }

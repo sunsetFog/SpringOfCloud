@@ -17,7 +17,7 @@ import java.util.UUID;
 /**
  * study: token
  */
-public class JWTUtils {
+public class JwtTokenUtils {
     private static final String ISSUER = "Chat-API";
     private static final String HMAC256_PWD = ".,sd125@#zs1a3";
 
@@ -92,8 +92,8 @@ public class JWTUtils {
         System.out.println("--verifierTokenBySysUser-2-"+data.asString());
         return JsonUtils.string2Obj(data.asString(), LoginParams.class);
     }
-    // 从token里获取user实体类
-    public static LoginParams getSysUser(String token){
+    // 根据token获取Jwt存的对象
+    public static LoginParams accessObj(String token){
         Claim data = JWT.decode(token).getClaim("AnalogData");
         return JsonUtils.string2Obj(data.asString(), LoginParams.class);
     }

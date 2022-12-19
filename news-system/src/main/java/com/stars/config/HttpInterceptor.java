@@ -2,7 +2,6 @@ package com.stars.config;
 
 import com.stars.common.util.JsonUtils;
 import com.stars.common.util.ResponseData;
-import com.stars.service.RedisUtilsService;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,11 +11,6 @@ import java.io.PrintWriter;
 
 // http拦截器  在springMVC里实例化了
 public class HttpInterceptor implements HandlerInterceptor {
-    private RedisUtilsService redisUtilsService;
-    // 构造器 WebMvcConfigurer里用了
-    public HttpInterceptor(RedisUtilsService redisUtilsService){
-        this.redisUtilsService = redisUtilsService;
-    }
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         response.setContentType("application/json");
