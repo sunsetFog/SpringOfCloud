@@ -122,7 +122,7 @@ public class LoginController {
      * @param response
      * @return
      */
-    @RequestMapping(value = "/user/logout")
+    @GetMapping(value = "/user/logout")
     public ResponseData logout(HttpServletRequest request, HttpServletResponse response) {
         // 获取header里的token
         String token = request.getHeader("token");
