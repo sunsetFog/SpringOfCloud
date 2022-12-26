@@ -139,16 +139,28 @@ pagehelper:
   params: count=countSql
 
 
-
+mybatis-plus:
+  mapper-locations: classpath:mybatis_mapper/*.xml
+  # 配置日志
+  configuration:
+    # 选控制台输出
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 关闭自动驼峰命名规则映射   问题：Mybatis-plus使用selectList查询数据为null的问题及解决办法   实体类不用驼峰引起的
+  #    map-underscore-to-camel-case: false
+  # 配置逻辑删除
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
 
 # study: mybatis  整合mybatis
-mybatis:
-  # 别名的包
-  type-aliases-package: com.stars.pojo
-  # xml配置文件
-  config-location: classpath:mybatis-config.xml
-  #  mapper放置
-  mapper-locations: classpath:mybatis_mapper/*.xml
+#mybatis:
+#  # 别名的包
+#  type-aliases-package: com.stars.pojo
+#  # xml配置文件
+#  config-location: classpath:mybatis-config.xml
+#  #  mapper放置
+#  mapper-locations: classpath:mybatis_mapper/*.xml
 
 # 日志级别
 logging:

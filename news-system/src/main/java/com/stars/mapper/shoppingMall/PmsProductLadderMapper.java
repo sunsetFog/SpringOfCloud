@@ -10,6 +10,6 @@ import java.util.List;
 @Mapper // 扫描文件 mybatis的mapper类
 @Repository
 public interface PmsProductLadderMapper {
-    int deleteWay(Long productId);
+    int deleteWay(@Param("productId") Long productId);
     int insertList(@Param("list") List<PmsProductLadder> productLadderList);
 }

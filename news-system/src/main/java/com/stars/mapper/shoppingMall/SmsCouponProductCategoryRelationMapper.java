@@ -14,5 +14,5 @@ public interface SmsCouponProductCategoryRelationMapper {
      * 批量创建
      */
     int insertList(@Param("list") List<SmsCouponProductCategoryRelation> productCategoryRelationList);
-    int deleteWay(Long id);
+    int deleteWay(@Param("id") Long id);
 }

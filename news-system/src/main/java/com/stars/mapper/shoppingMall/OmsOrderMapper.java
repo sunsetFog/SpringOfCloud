@@ -14,9 +14,9 @@ import java.util.List;
 @Repository
 public interface OmsOrderMapper {
     List<OmsOrder> selectWay(OmsOrderListParam omsOrderListParam);
-    OmsOrderDetail selectDetail(Long id);
+    OmsOrderDetail selectDetail(@Param("id") Long id);
     int updateWay(OmsOrder omsOrder);
-    int update_deleteStatus(Long id, Integer deleteStatus);
+    int update_deleteStatus(@Param("id") Long id, @Param("deleteStatus") Integer deleteStatus);
     /**
      * 批量发货
      */

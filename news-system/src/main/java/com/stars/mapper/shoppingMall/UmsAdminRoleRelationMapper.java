@@ -11,7 +11,7 @@ import java.util.List;
 @Mapper // 扫描文件 mybatis的mapper类
 @Repository
 public interface UmsAdminRoleRelationMapper {
-    int deleteWay(Long admin_id);
+    int deleteWay(@Param("admin_id") Long admin_id);
     /**
      * 批量插入用户角色关系
      */

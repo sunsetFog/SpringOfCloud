@@ -3,6 +3,7 @@ package com.stars.mapper.shoppingMall;
 import com.stars.apiParams.PmsProductAddParam;
 import com.stars.apiParams.PmsProductListParam;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public interface PmsProductMapper {
     List<PmsProductAddParam> selectWay(PmsProductListParam productQueryParam);
     int insertWay(PmsProductAddParam pmsProductAddParam);
     int updateWay(PmsProductAddParam pmsProductAddParam);
-    int update_deleteStatus(Long id, Integer deleteStatus);
+    int update_deleteStatus(@Param("id") Long id, @Param("deleteStatus") Integer deleteStatus);
 }

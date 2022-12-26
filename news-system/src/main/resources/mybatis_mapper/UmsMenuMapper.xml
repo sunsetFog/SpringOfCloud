@@ -48,7 +48,7 @@
         from ums_menu
         <where>
             <if test="subject != null">
-                subject = #{subject, jdbcType=INTEGER}
+                subject = #{subject, jdbcType=VARCHAR}
             </if>
         </where>
         order by ums_menu.sort Desc

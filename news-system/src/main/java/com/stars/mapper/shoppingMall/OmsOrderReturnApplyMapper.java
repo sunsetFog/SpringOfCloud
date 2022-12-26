@@ -4,6 +4,7 @@ import com.stars.apiParams.OmsOrderReturnApplyListParam;
 import com.stars.pojo.shoppingMall.OmsOrderReturnApply;
 import com.stars.pojo.shoppingMall.OmsOrderReturnApplyResult;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -18,6 +19,6 @@ public interface OmsOrderReturnApplyMapper {
     /**
      * 获取申请详情
      */
-    OmsOrderReturnApplyResult selectById(Long id);
+    OmsOrderReturnApplyResult selectById(@Param("id") Long id);
     int updateWay(OmsOrderReturnApply omsOrderReturnApply);
 }

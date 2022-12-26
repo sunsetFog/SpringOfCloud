@@ -2,6 +2,7 @@ package com.stars.mapper.shoppingMall;
 
 import com.stars.pojo.shoppingMall.UmsMenu;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -15,11 +16,11 @@ public interface UmsMenuMapper {
      * @param username
      * @return
      */
-    Set<String> queryUserAuths(String username);
+    Set<String> queryUserAuths(@Param("username") String username);
     List<UmsMenu> btnWay();
-    List<UmsMenu> selectWay(String subject);
-    UmsMenu rowWay(Long menuParentId);
+    List<UmsMenu> selectWay(@Param("subject") String subject);
+    UmsMenu rowWay(@Param("menuParentId") Long menuParentId);
     int insertWay(UmsMenu umsMenu);
     int updateWay(UmsMenu umsMenu);
-    int deleteWay(List<Long> ids);
+    int deleteWay(@Param("ids") List<Long> ids);
 }

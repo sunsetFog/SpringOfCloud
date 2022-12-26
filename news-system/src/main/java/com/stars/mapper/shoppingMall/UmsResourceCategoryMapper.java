@@ -2,6 +2,7 @@ package com.stars.mapper.shoppingMall;
 
 import com.stars.pojo.shoppingMall.UmsResourceCategory;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,5 +13,5 @@ public interface UmsResourceCategoryMapper {
     List<UmsResourceCategory> selectWay();
     int insertWay(UmsResourceCategory umsResourceCategory);
     int updateWay(UmsResourceCategory umsResourceCategory);
-    int deleteWay(Long id);
+    int deleteWay(@Param("id") Long id);
 }

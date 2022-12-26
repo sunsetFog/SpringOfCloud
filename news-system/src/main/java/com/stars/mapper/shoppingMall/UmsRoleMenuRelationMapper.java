@@ -3,6 +3,7 @@ package com.stars.mapper.shoppingMall;
 import com.stars.pojo.shoppingMall.UmsMenu;
 import com.stars.pojo.shoppingMall.UmsRoleMenuRelation;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -13,7 +14,7 @@ public interface UmsRoleMenuRelationMapper {
     /**
      * 根据角色ID获取菜单
      */
-    List<UmsMenu> selectWay(Long roleId);
-    int deleteWay(Long roleId);
+    List<UmsMenu> selectWay(@Param("roleId") Long roleId);
+    int deleteWay(@Param("roleId") Long roleId);
     int insertList(UmsRoleMenuRelation umsRoleMenuRelation);
 }

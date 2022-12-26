@@ -10,8 +10,8 @@ import java.util.List;
 @Mapper // 扫描文件 mybatis的mapper类
 @Repository
 public interface PmsSkuStockMapper {
-    List<PmsSkuStock> selectWay(Long productId, String keyword);
-    int deleteWay(Long productId);
+    List<PmsSkuStock> selectWay(@Param("productId") Long productId, @Param("keyword") String keyword);
+    int deleteWay(@Param("productId") Long productId);
     int insertList(@Param("list") List<PmsSkuStock> skuStockList);
     /**
      * 批量插入或替换操作

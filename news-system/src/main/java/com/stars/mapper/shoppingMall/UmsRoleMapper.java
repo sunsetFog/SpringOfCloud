@@ -2,6 +2,7 @@ package com.stars.mapper.shoppingMall;
 
 import com.stars.pojo.shoppingMall.UmsRole;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
@@ -17,9 +18,9 @@ public interface UmsRoleMapper {
      * @return Set<String>
      */
     @Select("select role_code from ums_role where id in (select role_id from ums_admin_role_relation where admin_id = (select id from ums_admin where username=#{username}))")
-    Set<String> queryUserRoles(String username);
-    List<UmsRole> selectWay(String name);
+    Set<String> queryUserRoles(@Param("username") String username);
+    List<UmsRole> selectWay(@Param("name") String name);
     int insertWay(UmsRole record);
     int updateWay(UmsRole record);
-    int deleteWay(Long id);
+    int deleteWay(@Param("id") Long id);
 }
