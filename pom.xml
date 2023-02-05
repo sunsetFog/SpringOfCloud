@@ -28,6 +28,7 @@
         <module>Rabbitmq-consumer</module>
         <module>upload-files</module>
         <module>news-system</module>
+        <module>utilities</module>
     </modules>
     <!--  版本号  -->
     <properties>

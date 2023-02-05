@@ -61,7 +61,7 @@ public class Goods extends Model<Goods> {
     @Version// 乐观锁注解
     private Integer version;
 //    @Excel(name = "逻辑删除", width = 25)
-    @TableLogic// 逻辑删除注解
+    @TableLogic// study: 逻辑删除注解
     private Integer deleted;
 
 
