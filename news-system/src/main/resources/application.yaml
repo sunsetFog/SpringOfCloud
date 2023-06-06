@@ -40,10 +40,9 @@ spring:
     # 驱动   mysql8: com.mysql.cj.jdbc.Driver      mysql5: com.mysql.jdbc.Driver
     driver-class-name: com.mysql.jdbc.Driver
     # serverTimezone时区 中国    useSSL=false不使用安全连接    characterEncoding字符集编码
-    # 可选localhost、127.0.0.1、容器名
+    # 可选localhost、127.0.0.1、容器名news-mysql
     # C:\Windows\System32\drivers\etc\HOSTS文件需要映射才能连接上news-mysql容器
-    # 写容器名就不需要映射啦
-    url: jdbc:mysql://news-mysql:3306/db_news?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/db_news?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     # 数据库用户名
     username: root
     # 数据库密码
@@ -110,8 +109,22 @@ spring:
     charse: UTF-8
   # study: redis  配置redis
   redis:
-    host: news-redis
+    host: localhost # localhost | news-redis
     port: 6379
+    password: root
+    database: 0
+#    url: redis://root@localhost:6379   # 方式2：url连接
+    lettuce:
+      pool:
+        #最大连接数
+        max-active: 32
+        #最大阻塞等待时间
+        max-wait: 300ms
+        #最大空闲连接
+        max-idle: 16
+        min-idle: 8
+      #连接超时时间
+    timeout: 1000
   # study: mail  邮件任务   密码：我的qq邮箱--设置--账户--开启POP3
   mail:
     username: 1456300078@qq.com

@@ -32,7 +32,7 @@ public class StarsApplication {
 	public Redisson redisson() {
 		Config config = new Config();
 		// 单机模式
-		config.useSingleServer().setAddress("redis://127.0.0.1:6379").setDatabase(0);
+		config.useSingleServer().setAddress("redis://127.0.0.1:6379").setPassword("root").setDatabase(0);
 		return (Redisson) Redisson.create(config);
 	}
 

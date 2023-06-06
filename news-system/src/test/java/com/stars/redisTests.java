@@ -20,6 +20,7 @@ public class redisTests {
     @Test
     void contextLoads() {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
+        jedis.auth("root");
         System.out.println("--连接--"+jedis.ping());
         //  操作字符串
         System.out.println("--字符串--"+jedis.set("name", "bee02"));
