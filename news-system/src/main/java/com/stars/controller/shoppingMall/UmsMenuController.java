@@ -141,7 +141,7 @@ public class UmsMenuController {
      */
     private void updateLevel(UmsMenu umsMenu) {
         System.out.println("--updateLevel--"+umsMenu);
-        if(umsMenu.getPerms() != "" || umsMenu.getPerms() != "null") {
+        if((String.valueOf(umsMenu.getPerms())).length() != 0 && umsMenu.getPerms() != null) {
             umsMenu.setMenuParentId(umsMenu.getRouterParentId());
             umsMenu.setMenuLevel(-1);
         } else if (umsMenu.getMenuParentId() == 0 || umsMenu.getMenuParentId() == -1) {

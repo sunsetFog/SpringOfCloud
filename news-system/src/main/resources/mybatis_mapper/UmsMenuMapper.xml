@@ -5,7 +5,7 @@
 <mapper namespace="com.stars.mapper.shoppingMall.UmsMenuMapper">
     <resultMap id="BaseResultMap" type="com.stars.pojo.shoppingMall.UmsMenu">
         <id column="id" jdbcType="BIGINT" property="id" />
-        <result column="menu_parent_id" jdbcType="BIGINT" property="menuParentId" />
+        <result column="menu_parent_id" jdbcType="INTEGER" property="menuParentId" />
         <result column="router_parent_id" jdbcType="INTEGER" property="routerParentId" />
         <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
         <result column="title" jdbcType="VARCHAR" property="title" />
@@ -93,7 +93,7 @@
         update ums_menu
         <set>
             <if test="menuParentId != null">
-                menu_parent_id = #{menuParentId,jdbcType=BIGINT},
+                menu_parent_id = #{menuParentId,jdbcType=INTEGER},
             </if>
             <if test="createTime != null">
                 create_time = #{createTime,jdbcType=TIMESTAMP},
