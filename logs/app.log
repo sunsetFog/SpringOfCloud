@@ -1,0 +1,1022 @@
+2024-07-10 16:58:37 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 72596 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 16:58:37 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 16:58:37 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 16:58:37 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 16:58:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 16:58:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 16:58:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2473eaeb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$69140df4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$623c5785] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$86c6db22] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy105] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 16:58:39 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 16:58:39 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 16:58:39 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 16:58:39 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 16:58:39 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 16:58:39 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1738 ms
+2024-07-10 16:58:39 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 16:58:39 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 16:58:39 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 16:58:40 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@363a4837, org.springframework.security.web.context.SecurityContextPersistenceFilter@b456968, org.springframework.security.web.header.HeaderWriterFilter@65acbdba, org.springframework.security.web.authentication.logout.LogoutFilter@2d7705bc, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5e7464bd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@630b1def, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@791a7857, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6c2fbd38, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48af90a6, org.springframework.security.web.session.SessionManagementFilter@34b832f8, org.springframework.security.web.access.ExceptionTranslationFilter@300955b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@93dcedf]
+2024-07-10 16:58:40 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 16:58:40 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 16:58:40 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 16:58:40 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 16:58:40 INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2024-07-10 16:58:40 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 16:58:40 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 16:58:40 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 16:58:40 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 16:58:40 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 16:58:40 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 16:58:40 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 16:58:40 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 16:58:40 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 16:58:40 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8062"]
+2024-07-10 16:58:40 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8062 (http) with context path '/sky'
+2024-07-10 16:58:40 INFO  com.stars.StarsApplication - Started StarsApplication in 3.603 seconds (JVM running for 8.994)
+2024-07-10 17:00:25 INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2024-07-10 17:00:25 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:00:25 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:00:25 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:00:34 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 73374 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:00:34 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:00:34 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:00:34 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:00:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:00:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:00:35 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2024-07-10 17:00:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$18e07a0a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$5d809d13] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$56a8e6a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$7b336a41] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:35 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:35 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy105] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:00:36 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:00:36 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:00:36 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:00:36 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:00:36 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:00:36 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1629 ms
+2024-07-10 17:00:36 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:00:36 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:00:36 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:00:37 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6890cf00, org.springframework.security.web.context.SecurityContextPersistenceFilter@19aca360, org.springframework.security.web.header.HeaderWriterFilter@2e58eaed, org.springframework.security.web.authentication.logout.LogoutFilter@66fada1f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@40720e74, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1134314e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55584198, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1c275b32, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@fdccb8e, org.springframework.security.web.session.SessionManagementFilter@55dd57c4, org.springframework.security.web.access.ExceptionTranslationFilter@3391f36c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1db17129]
+2024-07-10 17:00:37 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:00:37 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:00:37 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:00:37 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:00:37 INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2024-07-10 17:00:37 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:00:37 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:00:37 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:00:37 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:00:37 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:00:37 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:00:37 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:00:37 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:00:37 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:00:37 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:00:37 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8062 (http) with context path '/sky'
+2024-07-10 17:00:37 INFO  com.stars.StarsApplication - Started StarsApplication in 3.388 seconds (JVM running for 8.774)
+2024-07-10 17:11:05 INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2024-07-10 17:11:05 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:11:05 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:11:05 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:18:38 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 79799 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:18:38 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:18:38 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:18:38 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:18:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:18:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:18:39 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$33193c7b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$77b95f84] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$70e1a915] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$956c2cb2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:39 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:18:39 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy105] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:18:40 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:18:40 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:18:40 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:18:40 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:18:40 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:18:40 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1651 ms
+2024-07-10 17:18:40 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:18:40 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:18:40 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:18:41 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@61037faa, org.springframework.security.web.context.SecurityContextPersistenceFilter@1378db65, org.springframework.security.web.header.HeaderWriterFilter@700a620e, org.springframework.security.web.authentication.logout.LogoutFilter@12082669, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@14eddc41, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@26e33f7d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19aca360, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@2087d1da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3b116204, org.springframework.security.web.session.SessionManagementFilter@25dd9ee4, org.springframework.security.web.access.ExceptionTranslationFilter@1fd11849, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79e4cf46]
+2024-07-10 17:18:41 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:18:41 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:18:41 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:18:41 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:18:41 INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2024-07-10 17:18:41 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:18:41 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:18:41 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:18:41 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:18:41 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:18:41 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:18:41 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:18:41 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:18:41 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:18:41 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:18:41 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8062 (http) with context path '/sky'
+2024-07-10 17:18:41 INFO  com.stars.StarsApplication - Started StarsApplication in 3.418 seconds (JVM running for 9.077)
+2024-07-10 17:25:30 INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2024-07-10 17:25:30 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:25:30 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:25:30 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:25:47 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 82311 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:25:47 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:25:47 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:25:47 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:25:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:25:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:25:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$49b60d63] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$8e56306c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$877e79fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$ac08fd9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:25:49 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:25:49 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:25:49 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:25:49 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:25:49 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:25:49 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1511 ms
+2024-07-10 17:25:49 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:25:49 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:25:49 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:25:50 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@187e3c30, org.springframework.security.web.context.SecurityContextPersistenceFilter@70cef060, org.springframework.security.web.header.HeaderWriterFilter@7304084c, org.springframework.security.web.authentication.logout.LogoutFilter@439855ce, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2803cf96, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a4b6f72, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@93dcedf, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@6716c3da, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47e9d360, org.springframework.security.web.session.SessionManagementFilter@43a96d20, org.springframework.security.web.access.ExceptionTranslationFilter@5ea7d156, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58a64439]
+2024-07-10 17:25:50 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:25:50 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:25:50 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:25:50 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:25:50 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:25:50 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:25:50 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:25:50 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:25:50 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:25:50 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:25:50 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:25:50 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:25:50 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:25:50 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+2024-07-10 17:25:50 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:25:50 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:25:50 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:25:50 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-10 17:25:50 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-10 17:25:50 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1115)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1082)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.resolveSchedulerBean(ScheduledAnnotationBeanPostProcessor.java:313)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:254)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:231)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:103)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.stars.StarsApplication.main(StarsApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-07-10 17:26:36 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 82633 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:26:36 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:26:36 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:26:36 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:26:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:26:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:26:37 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2024-07-10 17:26:37 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e807e161] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:37 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$2ca8046a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:37 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:37 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$25d04dfb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:37 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$4a5ad198] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:37 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:37 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:37 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:37 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:26:38 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:26:38 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:26:38 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:26:38 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:26:38 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:26:38 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1732 ms
+2024-07-10 17:26:38 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:26:38 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:26:38 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:26:39 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4c59e5b8, org.springframework.security.web.context.SecurityContextPersistenceFilter@582afda4, org.springframework.security.web.header.HeaderWriterFilter@564cf777, org.springframework.security.web.authentication.logout.LogoutFilter@1462c48e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2f670808, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18c3aba8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@620f13e1, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4c3b99c8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@65b59ca6, org.springframework.security.web.session.SessionManagementFilter@64187e6d, org.springframework.security.web.access.ExceptionTranslationFilter@cacb610, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@28d405ba]
+2024-07-10 17:26:39 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:26:39 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:26:39 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:26:39 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:26:39 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:26:39 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:26:39 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:26:40 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:26:40 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:26:40 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:26:40 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:26:40 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:26:40 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:26:40 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+2024-07-10 17:26:40 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:26:40 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:26:40 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:26:40 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-10 17:26:40 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-10 17:26:40 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1115)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1082)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.resolveSchedulerBean(ScheduledAnnotationBeanPostProcessor.java:313)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:254)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:231)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:103)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.stars.StarsApplication.main(StarsApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-07-10 17:32:49 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 84993 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:32:49 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:32:49 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:32:49 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:32:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:32:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:32:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$24629935] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$6902bc3e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$622b05cf] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$86b5896c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:50 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:32:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:32:51 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:32:51 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:32:51 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:32:51 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:32:51 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1495 ms
+2024-07-10 17:32:51 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:32:51 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:32:51 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:32:52 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@155aaa79, org.springframework.security.web.context.SecurityContextPersistenceFilter@1361d141, org.springframework.security.web.header.HeaderWriterFilter@69ec58a1, org.springframework.security.web.authentication.logout.LogoutFilter@62b3a8b7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6317984e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@596a0da2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@45eca8af, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@58891230, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@162df94f, org.springframework.security.web.session.SessionManagementFilter@3f8f4122, org.springframework.security.web.access.ExceptionTranslationFilter@d6d55e6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@23bbafb6]
+2024-07-10 17:32:52 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:32:52 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:32:52 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:32:52 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:32:52 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:32:52 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:32:52 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:32:52 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:32:52 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:32:52 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:32:52 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:32:52 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:32:52 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:32:52 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+2024-07-10 17:32:52 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:32:52 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:32:52 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:32:52 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-10 17:32:52 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-10 17:32:52 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1115)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1082)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.resolveSchedulerBean(ScheduledAnnotationBeanPostProcessor.java:313)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:254)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:231)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:103)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.stars.StarsApplication.main(StarsApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-07-10 17:41:47 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 88153 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:41:47 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:41:47 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:41:47 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:41:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:41:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:41:48 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2024-07-10 17:41:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$59eed75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$4a3f107e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$43675a0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$67f1ddac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:48 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy105] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:41:49 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:41:49 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:41:49 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:41:49 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:41:49 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:41:49 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1745 ms
+2024-07-10 17:41:49 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:41:49 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:41:49 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:41:50 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@515fdb8a, org.springframework.security.web.context.SecurityContextPersistenceFilter@4a4e8a7, org.springframework.security.web.header.HeaderWriterFilter@5ac40761, org.springframework.security.web.authentication.logout.LogoutFilter@a44f76f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@200a9159, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5901ef58, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@596a0da2, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4025cfb2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2f670808, org.springframework.security.web.session.SessionManagementFilter@1e924e8f, org.springframework.security.web.access.ExceptionTranslationFilter@7dea734, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a9262d9]
+2024-07-10 17:41:50 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:41:50 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:41:50 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:41:50 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:41:51 INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2024-07-10 17:41:51 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:41:51 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:41:51 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:41:51 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:41:51 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:41:51 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:41:51 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:41:51 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:41:51 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:41:51 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:41:51 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8062 (http) with context path '/sky'
+2024-07-10 17:41:51 INFO  com.stars.StarsApplication - Started StarsApplication in 3.72 seconds (JVM running for 9.045)
+2024-07-10 17:44:33 INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2024-07-10 17:44:33 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:44:33 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:44:33 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:44:48 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 89296 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:44:48 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:44:48 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:44:48 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:44:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:44:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:44:49 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c902c69b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$da2e9a4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6cb3335] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$2b55b6d2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:49 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:44:50 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:44:50 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:44:50 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:44:50 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:44:50 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:44:50 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1502 ms
+2024-07-10 17:44:50 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:44:50 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:44:50 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:44:51 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6976c27d, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f150922, org.springframework.security.web.header.HeaderWriterFilter@4c219080, org.springframework.security.web.authentication.logout.LogoutFilter@2844e6d8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@13c4f262, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4530849, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f5a1fcb, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@656fc4ec, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63a69f1a, org.springframework.security.web.session.SessionManagementFilter@2558552e, org.springframework.security.web.access.ExceptionTranslationFilter@13954d1c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e67f04e]
+2024-07-10 17:44:51 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:44:51 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:44:51 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:44:51 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:44:51 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:44:51 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:44:51 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:44:52 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:44:52 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:44:52 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:44:52 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:44:52 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:44:52 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:44:52 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+2024-07-10 17:44:52 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:44:52 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:44:52 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:44:52 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-10 17:44:52 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-10 17:44:52 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1115)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1082)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.resolveSchedulerBean(ScheduledAnnotationBeanPostProcessor.java:313)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:254)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:231)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:103)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.stars.StarsApplication.main(StarsApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-07-10 17:50:19 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 91295 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:50:19 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:50:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:50:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:50:19 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:50:19 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:50:19 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14ms. Found 0 repository interfaces.
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$56c640e3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$9b6663ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$948ead7d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$b919311a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:50:20 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:50:20 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:50:20 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:50:20 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:50:21 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:50:21 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1580 ms
+2024-07-10 17:50:21 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:50:21 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:50:21 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:50:22 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@29c319ba, org.springframework.security.web.context.SecurityContextPersistenceFilter@330390b3, org.springframework.security.web.header.HeaderWriterFilter@2820cd16, org.springframework.security.web.authentication.logout.LogoutFilter@24533e78, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@341978e0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2ccca75a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4414f77b, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@41de5ac0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77e7bdca, org.springframework.security.web.session.SessionManagementFilter@780c9a9e, org.springframework.security.web.access.ExceptionTranslationFilter@130e085b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@59e0334c]
+2024-07-10 17:50:22 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:50:22 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:50:22 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:50:22 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:50:22 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:50:22 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:50:22 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:50:22 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:50:22 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:50:22 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:50:22 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:50:22 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:50:22 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:50:22 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+2024-07-10 17:50:22 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:50:22 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 17:50:22 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 17:50:22 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-10 17:50:22 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-10 17:50:22 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1115)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1082)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.resolveSchedulerBean(ScheduledAnnotationBeanPostProcessor.java:313)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:254)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:231)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:103)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.stars.StarsApplication.main(StarsApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-07-10 17:53:21 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 92400 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 17:53:21 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 17:53:21 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 17:53:21 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 17:53:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 17:53:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 17:53:21 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d5ce6f1d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$1a6e9226] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$1396dbb7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$38215f54] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy105] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 17:53:22 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 17:53:22 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:53:22 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 17:53:22 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 17:53:22 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 17:53:22 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1555 ms
+2024-07-10 17:53:23 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 17:53:23 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:53:23 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 17:53:24 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2497eee2, org.springframework.security.web.context.SecurityContextPersistenceFilter@1ec1be2b, org.springframework.security.web.header.HeaderWriterFilter@4f1b6145, org.springframework.security.web.authentication.logout.LogoutFilter@f6e5c1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6506cccb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f663be8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@212e33d4, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@48baa454, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@36573944, org.springframework.security.web.session.SessionManagementFilter@620f13e1, org.springframework.security.web.access.ExceptionTranslationFilter@36aaede6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@65b59ca6]
+2024-07-10 17:53:24 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 17:53:24 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 17:53:24 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 17:53:24 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 17:53:24 INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2024-07-10 17:53:24 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 17:53:24 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 17:53:24 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:53:24 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 17:53:24 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 17:53:24 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:53:24 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 17:53:24 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 17:53:24 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 17:53:24 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8062"]
+2024-07-10 17:53:24 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8062 (http) with context path '/sky'
+2024-07-10 17:53:24 INFO  com.stars.StarsApplication - Started StarsApplication in 3.339 seconds (JVM running for 8.689)
+2024-07-10 18:00:13 INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2024-07-10 18:00:13 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:00:13 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 18:00:13 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 18:01:15 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 95201 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 18:01:15 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 18:01:15 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 18:01:15 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 18:01:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 18:01:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 18:01:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2024-07-10 18:01:15 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b100c9cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:15 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$f5a0ecd5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$eec93666] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$1353ba03] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:01:16 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 18:01:16 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 18:01:16 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 18:01:16 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 18:01:16 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 18:01:16 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1561 ms
+2024-07-10 18:01:16 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 18:01:17 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 18:01:17 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 18:01:17 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4386646d, org.springframework.security.web.context.SecurityContextPersistenceFilter@73c58b6, org.springframework.security.web.header.HeaderWriterFilter@235bda2f, org.springframework.security.web.authentication.logout.LogoutFilter@65d7b86d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@19eb4cc3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6cfaa194, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@382c7f27, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@71f6f91c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2a704f91, org.springframework.security.web.session.SessionManagementFilter@7203cc7f, org.springframework.security.web.access.ExceptionTranslationFilter@23e4356b, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@36ec4f6a]
+2024-07-10 18:01:17 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 18:01:17 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:01:17 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 18:01:17 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 18:01:18 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 18:01:18 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 18:01:18 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:01:18 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 18:01:18 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 18:01:18 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:01:18 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 18:01:18 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:01:18 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 18:01:18 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+2024-07-10 18:01:18 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:01:18 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 18:01:18 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 18:01:18 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-10 18:01:18 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-10 18:01:18 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1115)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1082)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.resolveSchedulerBean(ScheduledAnnotationBeanPostProcessor.java:313)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:254)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:231)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:103)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.stars.StarsApplication.main(StarsApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-07-10 18:02:19 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 95595 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 18:02:19 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 18:02:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 18:02:19 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 18:02:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 18:02:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 18:02:20 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ad275bce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$f1c77ed7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$eaefc868] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$f7a4c05] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:20 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:02:21 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 18:02:21 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 18:02:21 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 18:02:21 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 18:02:21 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 18:02:21 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1681 ms
+2024-07-10 18:02:21 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 18:02:21 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 18:02:21 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 18:02:22 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c673949, org.springframework.security.web.context.SecurityContextPersistenceFilter@663c8fba, org.springframework.security.web.header.HeaderWriterFilter@600aee77, org.springframework.security.web.authentication.logout.LogoutFilter@330390b3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@78740af0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a019b55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@794dda3d, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@71aeacc9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@53f362a4, org.springframework.security.web.session.SessionManagementFilter@270eadda, org.springframework.security.web.access.ExceptionTranslationFilter@1ec1f221, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@13d49de4]
+2024-07-10 18:02:22 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 18:02:22 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:02:22 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 18:02:22 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 18:02:22 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 18:02:22 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 18:02:22 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:02:22 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 18:02:22 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 18:02:22 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:02:22 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 18:02:22 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:02:22 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 18:02:22 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+2024-07-10 18:02:22 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:02:22 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 18:02:22 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 18:02:22 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-10 18:02:22 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-10 18:02:22 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1115)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1082)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.resolveSchedulerBean(ScheduledAnnotationBeanPostProcessor.java:313)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:254)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:231)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:103)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.stars.StarsApplication.main(StarsApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-07-10 18:26:30 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 98613 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 18:26:30 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 18:26:30 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 18:26:30 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 18:26:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 18:26:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 18:26:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15ms. Found 0 repository interfaces.
+2024-07-10 18:26:31 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2e87b664] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:31 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$7327d96d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:31 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:31 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$6c5022fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:31 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$90daa69b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:31 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:31 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:31 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:31 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy106] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy109] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy111] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:26:32 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 18:26:32 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 18:26:32 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 18:26:32 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 18:26:32 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 18:26:32 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1608 ms
+2024-07-10 18:26:32 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 18:26:32 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 18:26:32 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 18:26:33 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24751e2e, org.springframework.security.web.context.SecurityContextPersistenceFilter@7ccf96b0, org.springframework.security.web.header.HeaderWriterFilter@61ce68ee, org.springframework.security.web.authentication.logout.LogoutFilter@1ecb0ef1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@ed8088e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f117f28, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2db413c9, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@124bba54, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40fff36e, org.springframework.security.web.session.SessionManagementFilter@13a75d6f, org.springframework.security.web.access.ExceptionTranslationFilter@18672200, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6800900e]
+2024-07-10 18:26:33 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 18:26:33 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:26:33 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 18:26:33 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 18:26:33 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 18:26:33 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 18:26:33 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:26:33 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 18:26:33 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 18:26:33 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:26:33 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 18:26:33 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:26:33 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 18:26:33 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+2024-07-10 18:26:33 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:26:33 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 18:26:33 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-07-10 18:26:33 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-07-10 18:26:33 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-07-10 18:26:33 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanNotOfRequiredTypeException: Bean named 'defaultSockJsTaskScheduler' is expected to be of type 'org.springframework.scheduling.TaskScheduler' but was actually of type 'org.springframework.beans.factory.support.NullBean'
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:392)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:224)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1115)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1082)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.resolveSchedulerBean(ScheduledAnnotationBeanPostProcessor.java:313)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.finishRegistration(ScheduledAnnotationBeanPostProcessor.java:254)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:231)
+	at org.springframework.scheduling.annotation.ScheduledAnnotationBeanPostProcessor.onApplicationEvent(ScheduledAnnotationBeanPostProcessor.java:103)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:896)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:163)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.stars.StarsApplication.main(StarsApplication.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2024-07-10 18:52:53 INFO  com.stars.StarsApplication - Starting StarsApplication on ivorydeMac-mini.local with PID 8247 (/Users/ivory/Desktop/Rafael/SpringOfCloud/news-system/target/classes started by ivory in /Users/ivory/Desktop/Rafael/SpringOfCloud)
+2024-07-10 18:52:53 INFO  com.stars.StarsApplication - The following profiles are active: dev
+2024-07-10 18:52:53 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-07-10 18:52:53 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-07-10 18:52:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2024-07-10 18:52:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2024-07-10 18:52:54 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$59eed75] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.stars.config.Shiro.ShiroConfig$$EnhancerBySpringCGLIB$$4a3f107e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'mybatis-plus-com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration' of type [com.baomidou.mybatisplus.autoconfigure.MybatisPlusAutoConfiguration$$EnhancerBySpringCGLIB$$43675a0f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'druidConfig' of type [com.stars.config.DruidConfig$$EnhancerBySpringCGLIB$$67f1ddac] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'dataSource' of type [com.alibaba.druid.pool.DruidDataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'spring.datasource-org.springframework.boot.autoconfigure.jdbc.DataSourceProperties' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker' of type [org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionFactory' of type [org.apache.ibatis.session.defaults.DefaultSqlSessionFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'sqlSessionTemplate' of type [org.mybatis.spring.SqlSessionTemplate] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsRoleMapper' of type [jdk.proxy3.$Proxy105] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsMenuMapper' of type [jdk.proxy3.$Proxy108] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [org.mybatis.spring.mapper.MapperFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'umsAdminMapper' of type [jdk.proxy3.$Proxy110] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.stars.config.Shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:54 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-07-10 18:52:55 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8062 (http)
+2024-07-10 18:52:55 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8062"]
+2024-07-10 18:52:55 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-07-10 18:52:55 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2024-07-10 18:52:55 INFO  o.a.c.c.C.[.[localhost].[/sky] - Initializing Spring embedded WebApplicationContext
+2024-07-10 18:52:55 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1622 ms
+2024-07-10 18:52:55 INFO  org.redisson.Version - Redisson 3.18.1
+2024-07-10 18:52:55 INFO  o.r.c.p.MasterPubSubConnectionPool - 1 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 18:52:55 INFO  o.r.c.pool.MasterConnectionPool - 24 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-07-10 18:52:56 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48ec2530, org.springframework.security.web.context.SecurityContextPersistenceFilter@d6d55e6, org.springframework.security.web.header.HeaderWriterFilter@2f6e828a, org.springframework.security.web.authentication.logout.LogoutFilter@2f492782, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2b4a87ae, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@69ec58a1, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@13ff6b84, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@515fdb8a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1766118b, org.springframework.security.web.session.SessionManagementFilter@e1b31c, org.springframework.security.web.access.ExceptionTranslationFilter@55eb255c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@200a9159]
+2024-07-10 18:52:56 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2024-07-10 18:52:56 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:52:56 INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-07-10 18:52:56 INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page: class path resource [public/index.html]
+2024-07-10 18:52:56 INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2024-07-10 18:52:56 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2024-07-10 18:52:56 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 3 custom documentation plugin(s)
+2024-07-10 18:52:56 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:52:56 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminDeleteUsingGET_1
+2024-07-10 18:52:56 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: adminListUsingPOST_1
+2024-07-10 18:52:56 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:52:56 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: appleUsingPOST_1
+2024-07-10 18:52:56 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2024-07-10 18:52:56 INFO  s.d.s.w.r.o.CachingOperationNameGenerator - Generating unique operation named: penBeanUsingPOST_1
+2024-07-10 18:52:57 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8062"]
+2024-07-10 18:52:57 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8062 (http) with context path '/sky'
+2024-07-10 18:52:57 INFO  com.stars.StarsApplication - Started StarsApplication in 3.617 seconds (JVM running for 8.934)
+2024-07-10 18:56:27 INFO  o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'taskScheduler'
+2024-07-10 18:56:27 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2024-07-10 18:56:27 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-07-10 18:56:27 INFO  c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
