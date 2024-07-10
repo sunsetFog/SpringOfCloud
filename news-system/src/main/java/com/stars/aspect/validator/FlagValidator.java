@@ -1,4 +1,4 @@
-package com.stars.config.validator;
+package com.stars.aspect.validator;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

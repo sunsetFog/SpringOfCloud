@@ -1,4 +1,4 @@
-package com.stars.config;
+package com.stars.config.SpringMvc;
 
 import org.springframework.web.servlet.LocaleResolver;
 import org.thymeleaf.util.StringUtils;

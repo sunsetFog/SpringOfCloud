@@ -1,6 +1,6 @@
 package com.stars.apiParams;
 
-import com.stars.config.validator.FlagInterface;
+import com.stars.aspect.validator.FlagInterface;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

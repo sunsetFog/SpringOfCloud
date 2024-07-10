@@ -1,4 +1,4 @@
-package com.stars.config;
+package com.stars.config.SpringMvc;
 
 import com.stars.common.util.JsonUtils;
 import com.stars.common.fruit.ResponseData;
