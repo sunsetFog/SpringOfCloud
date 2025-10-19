@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit;
  * 下载RedisClient
  * Apache JMeter工具模拟高并发场景
  */
-//@RestController
-//@CrossOrigin
+@RestController
+@CrossOrigin
 public class RedisLock {
     @Autowired
     private Redisson redisson;

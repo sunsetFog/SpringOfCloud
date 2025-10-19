@@ -28,12 +28,12 @@ public class StarsApplication {
 		SpringApplication.run(StarsApplication.class, args);
 	}
 	// study: 高并发分布式锁    redisson客户端连接
-//	@Bean
-//	public Redisson redisson() {
-//		Config config = new Config();
-//		// 单机模式
-//		config.useSingleServer().setAddress("redis://127.0.0.1:6379").setPassword("root").setDatabase(0);
-//		return (Redisson) Redisson.create(config);
-//	}
+	@Bean
+	public Redisson redisson() {
+		Config config = new Config();
+		// 单机模式
+		config.useSingleServer().setAddress("redis://127.0.0.1:6379").setPassword("root").setDatabase(0);
+		return (Redisson) Redisson.create(config);
+	}
 
 }
