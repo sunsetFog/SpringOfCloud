@@ -12,7 +12,7 @@ public class FtpConfig {
     /**
      * 阿里云服务器ip地址
      */
-    private String FTP_ADDRESS = "39.108.174.145";
+    private String FTP_ADDRESS = "8.148.240.171";
 
     /**
      * 端口号

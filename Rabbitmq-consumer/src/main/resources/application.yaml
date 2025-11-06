@@ -4,8 +4,10 @@ server:
 spring:
   #  消息中间件配置
   rabbitmq:
-    username: admin
-    password: admin
+    username: guest
+    password: guest
     virtual-host: /
-    host: 39.108.174.145
+    # host: localhost
+    # host: news-rabbitmq
+    host: 8.148.240.171
     port: 5672

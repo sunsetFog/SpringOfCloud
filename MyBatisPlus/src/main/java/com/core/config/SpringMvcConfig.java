@@ -21,7 +21,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
         http://localhost:8060/sky/profile/goodsImportExcelErrorLog4590.txt
         study: linux-img
         http://localhost:8060/sky/online/20221128234114.jpg
-        http://39.108.174.145:8060/sky/online/20221128234114.jpg
+        http://8.148.240.171:8060/sky/online/20221128234114.jpg
 
         addResourceHandler加一个路径校验，路径必须要有profile
         下载txt https://blog.csdn.net/qq_44717657/article/details/125255185

@@ -12,7 +12,7 @@ public class Consumer {
             // 创建连接工程
             ConnectionFactory connectionFactory = new ConnectionFactory();
             // 设置连接属性
-            connectionFactory.setHost("39.108.174.145");
+            connectionFactory.setHost("8.148.240.171");
             connectionFactory.setPort(5672);
             connectionFactory.setUsername("admin");
             connectionFactory.setPassword("admin");
