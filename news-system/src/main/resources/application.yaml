@@ -15,9 +15,9 @@ spring:
     username: guest
     password: guest
     virtual-host: /
-    # host: localhost
+    host: localhost
     # host: news-rabbitmq
-    host: 8.148.240.171
+    # host: 8.148.240.171
     port: 5672
   # 上传文件大小  study: uploadImg
   servlet:
@@ -40,13 +40,13 @@ spring:
   # study: MYSQL Driver  连接数据库
   datasource:
     # 驱动   mysql8: com.mysql.cj.jdbc.Driver      mysql5: com.mysql.jdbc.Driver
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     # serverTimezone时区 中国    useSSL=false不使用安全连接    characterEncoding字符集编码
     # 可选localhost、127.0.0.1、容器名news-mysql
     # C:\Windows\System32\drivers\etc\HOSTS文件需要映射才能连接上news-mysql容器
-    # url: jdbc:mysql://localhost:3306/db_news?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/db_news?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     # url: jdbc:mysql://news-mysql:3306/db_news?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
-    url: jdbc:mysql://8.148.240.171:3306/db_news?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    # url: jdbc:mysql://8.148.240.171:3306/db_news?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
     # 数据库用户名
     username: root
     # 数据库密码
@@ -111,13 +111,13 @@ spring:
   # 文件编码
   banner:
     charse: UTF-8
-  # study: redis  配置redis
+  # study: redis  配置redis，改成不设置密码了
   redis:
-    # host: localhost
+    host: localhost
     # host: news-redis
-    host: 8.148.240.171
+    # host: 8.148.240.171
     port: 6379
-    password: root
+    # password: root
     database: 0
 #    url: redis://root@localhost:6379   # 方式2：url连接
     lettuce:
