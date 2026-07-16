@@ -1,0 +1,8 @@
+
+resources 资源配置目录
+    admin 后台react打包dist代码
+    front 前台react打包dist代码
+    mapper SQL语句对应dao
+    static
+        upload 上传的图片
+    application.yaml 应用配置文件

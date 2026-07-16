@@ -1,0 +1,18 @@
+.idea 开发工具配置文件
+.mvn Maven配置文件
+src 源代码目录
+database 数据库文件
+pom.xml Maven配置文件
+    config 配置类
+        Interceptor 拦截器，登陆校验
+        annotation 自定义注解
+        exception 异常处理
+    utils 工具类
+    controller 控制层，校验参数，返回结果
+    dao/mapper 数据持久层/操作层，增删改查操作
+    entity/pojo 实体层，对应数据库表格
+    service 服务层，业务处理，事务控制
+    **Application.java 启动类
+
+页面请求 》controller 》service 》mapper 》 数据库
+
