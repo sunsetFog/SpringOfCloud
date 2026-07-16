@@ -1,6 +1,15 @@
 server:
   port: 7003
 
+spring:
+  # 排除 DataSource/Druid/Redis/RabbitMQ 自动配置
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration
+      - com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
 
 # eureka（读：尤里卡）服务器配置   启动后访问：http://localhost:7001/   自我保护机制：访问界面的红色警告是客户端掉线，每30秒监控到
 eureka:

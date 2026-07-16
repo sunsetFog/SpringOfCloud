@@ -16,18 +16,28 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.6.6</version>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
+        <!-- 覆盖父POM的旧版starter-web，使用与BOM一致的2.7.12 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.7.12</version>
+        </dependency>
 <!--    类似： spring-cloud-starter-eureka-server   -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
             <version>3.1.2</version>
-        </dependency>
-        <!--    完善监控信息    -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>2.7.6</version>
         </dependency>
     </dependencies>
 

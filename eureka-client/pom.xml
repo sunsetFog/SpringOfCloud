@@ -16,7 +16,23 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.6.6</version>
+            </plugin>
+        </plugins>
+    </build>
+
     <dependencies>
+        <!-- 覆盖父POM的web starter，确保autoconfigure版本一致 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.7.12</version>
+        </dependency>
         <!--   客户端     -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -34,11 +50,17 @@
             <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
             <version>2.2.9.RELEASE</version>
         </dependency>
-        <!--    负载均衡器    -->
+        <!--    声明式HTTP客户端(Feign → OpenFeign)    -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
-            <version>1.4.6.RELEASE</version>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>3.1.2</version>
+        </dependency>
+        <!--    Feign Hystrix 降级支持    -->
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-hystrix</artifactId>
+            <version>11.8</version>
         </dependency>
         <!--    断路器：
                     服务熔断：服务端处理，某个服务超时或者异常，引起熔断，像保险丝
